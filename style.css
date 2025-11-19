@@ -1,12 +1,14 @@
-/*
-    === Style global ===
-*/
+/* === Style global === */
+
+/* Variables */
 
 :root{
     --couleur-accent: #0D5EAF;
     --couleur-survole: #82B0D9;
     --marge-interne : 1em 5em;
 }
+
+/* Polices */
 
 @font-face {
   font-family: "Playfair";
