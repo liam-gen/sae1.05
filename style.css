@@ -1,0 +1,290 @@
+/*
+    === Style global ===
+*/
+
+:root{
+    --couleur-accent: #0D5EAF;
+    --couleur-survole: #82B0D9;
+    --marge-interne : 1em 5em;
+}
+
+@font-face {
+  font-family: "Playfair";
+  src:
+    url("./assets/fonts/Playfair.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Inter";
+  src:
+    url("./assets/fonts/Inter.ttf") format("truetype");
+}
+
+/* Style général */
+
+html, body{
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    font-family: Playfair, Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: white;
+}
+
+body > header, footer{
+    background-color: var(--couleur-accent);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-family: Inter, Arial, sans-serif;
+    font-weight: bold;
+}
+
+/* === HEADER === */
+
+body > header {
+    padding: var(--marge-interne);
+}
+
+#bouton-menu{
+    display: none;
+    width: 40px;
+    height: 40px;
+}
+
+#menu-mobile{
+    display: flex;
+    background-color: var(--couleur-accent);
+    flex-direction: column;
+    gap: 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+}
+
+#menu-mobile.ouvert{
+    max-height: 250px;
+}
+
+body > header img:not(#bouton-menu){
+    width: 70px;
+    height: 70px;
+}
+
+body > header nav ul{
+    list-style: none;
+    display: flex;
+    gap: 10px;
+}
+
+body > header nav ul a{
+    text-decoration: none;
+    color: white;
+    transition: all .5s;
+    padding: .5em 1em;
+    border-radius: 8px;
+}
+
+body > header nav ul a:hover{
+    background-color: white;
+    color: var(--couleur-accent);
+}
+
+/* === MAIN === */
+
+main{
+    flex: 1;
+}
+
+/* === FOOTER === */
+
+footer {
+    padding: 2em 5em;
+}
+
+footer div{
+    display: flex;
+}
+
+footer div nav ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+}
+
+footer div nav ul a{
+    text-decoration: none;
+    color: white;
+}
+
+footer div:nth-of-type(2){
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    height: 100%;
+}
+
+footer div:nth-of-type(2) p{
+    margin: 0;
+}
+
+footer div .icon{
+    width: 50px
+}
+
+/* === MOBILE === */
+@media screen and (max-width: 428px) {
+
+    header{
+        padding: .8em;
+    }
+
+    #bouton-menu{
+        display: block;
+    }
+
+    header nav{
+        display: none;
+    }
+
+    footer{
+        flex-direction: column;
+        gap: 30px;
+        padding: .2em;
+    }
+
+    footer img{
+        width: 50px;
+    }
+
+    footer div{
+        width: 100%;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    footer div:nth-of-type(2){
+        flex-direction: row;
+    }
+}
+
+/* ----------------------------------------
+    PAGE ACCUEIL
+   ---------------------------------------- */
+
+main header{
+    position: relative;
+}
+main header img{
+    width: 100%;
+}
+
+main header div.fond-noir{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+
+main header div:not(.fond-noir){
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+main header div:not(.fond-noir) h1{
+    font-size: 15em;
+    text-transform: uppercase;
+    font-weight: bolder;
+    margin: 0;
+}
+
+
+main header div:not(.fond-noir) p{
+    font-size: 2.5em;
+}
+
+main header section{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+main header section article{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    border-radius: 16px;
+    padding: 0 2em;
+}
+
+main header section article img{
+    width: 40px;
+}
+
+
+
+/* Format mobile page accueil */
+@media screen and (max-width: 428px) {}
+
+/* ----------------------------------------
+    PAGE PERSONNAGES
+   ---------------------------------------- */
+
+
+
+
+
+/* Format mobile page personnages */
+@media screen and (max-width: 428px) {}
+
+/* ----------------------------------------
+    PAGE GASTRONOMIE
+   ---------------------------------------- */
+
+
+
+
+
+/* Format mobile page gastronomie */
+@media screen and (max-width: 428px) {}
+
+/* ----------------------------------------
+    PAGE LIEUX
+   ---------------------------------------- */
+
+
+
+
+
+/* Format mobile page lieux */
+@media screen and (max-width: 428px) {}
+
+/* ----------------------------------------
+    PAGE ARTS
+   ---------------------------------------- */
+
+
+
+
+
+
+
+/* Format mobile page arts */
+@media screen and (max-width: 428px) {}
