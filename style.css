@@ -38,21 +38,26 @@ body{
     color: white;
 }
 
-body > header, footer{
+/* === HEADER === */
+
+body > header {
+    padding: var(--marge-interne);
     background-color: var(--couleur-accent);
 
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-direction: column;
 
     font-family: Inter, Arial, sans-serif;
     font-weight: bold;
 }
 
-/* === HEADER === */
-
-body > header {
-    padding: var(--marge-interne);
+body > header div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }
 
 #bouton-menu{
@@ -62,16 +67,29 @@ body > header {
 }
 
 #menu-mobile{
-    display: flex;
     background-color: var(--couleur-accent);
-    flex-direction: column;
-    gap: 20px;
     max-height: 0;
     overflow: hidden;
     transition: all 0.5s ease-in-out;
+    width: 100%;
+}
+
+#menu-mobile ul{
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+#menu-mobile ul li a{
+    font-family: Inter, Arial, sans-serif;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 #menu-mobile.ouvert{
+    padding: 1em;
     max-height: 250px;
 }
 
@@ -86,7 +104,7 @@ body > header nav ul{
     gap: 10px;
 }
 
-body > header nav ul a{
+body > header nav:not(#menu-mobile) ul a{
     text-decoration: none;
     color: white;
     transition: all .5s;
@@ -94,7 +112,7 @@ body > header nav ul a{
     border-radius: 8px;
 }
 
-body > header nav ul a:hover{
+body > header nav:not(#menu-mobile) ul a:hover{
     background-color: white;
     color: var(--couleur-accent);
 }
@@ -109,6 +127,14 @@ main{
 
 footer {
     padding: 2em 5em;
+    background-color: var(--couleur-accent);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-family: Inter, Arial, sans-serif;
+    font-weight: bold;
 }
 
 footer div{
@@ -146,7 +172,7 @@ footer div .icon{
 /* === MOBILE === */
 @media screen and (max-width: 428px) {
 
-    header{
+    body > header{
         padding: .8em;
     }
 
@@ -154,7 +180,7 @@ footer div .icon{
         display: block;
     }
 
-    header nav{
+    body > header div nav{
         display: none;
     }
 
@@ -243,7 +269,35 @@ main header section article img{
 
 
 /* Format mobile page accueil */
-@media screen and (max-width: 428px) {}
+@media screen and (max-width: 428px) {
+    main header div:not(.fond-noir){
+        width: 90%;
+    }
+
+    body{
+        font-size: 1em;
+    }
+    main header div:not(.fond-noir) h1{
+        font-size: 3em;
+    }
+
+    main header div:not(.fond-noir) p{
+        font-size: 1em;
+    }
+
+    main header section article img{
+        width: 20px;
+    }
+
+    main header section article h2{
+        margin: 0;
+        font-size: .7em;
+    }
+
+    main header section article{
+        padding: .1em .8em;
+    }
+}
 
 /* ----------------------------------------
     PAGE PERSONNAGES

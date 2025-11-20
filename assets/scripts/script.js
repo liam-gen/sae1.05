@@ -1,4 +1,4 @@
-/*  */
+/* Script JS */
 
 document.addEventListener("DOMContentLoaded", () => {
     /* Page changée */
