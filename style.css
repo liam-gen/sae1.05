@@ -364,6 +364,12 @@ footer div .icon{
     border-radius: 40px;
 }
 
+/* Formalités d'entrée */
+
+.page-accueil > section:nth-of-type(4){
+    background-color: var(--couleur-accent)
+}
+
 /* Format mobile page accueil */
 @media screen and (max-width: 428px) {
     .page-accueil header div:not(.fond-noir){
@@ -398,7 +404,7 @@ footer div .icon{
     .page-accueil > section:nth-of-type(3) article{
         flex-basis: 100%;
     }
-    
+
     .page-accueil > section:nth-of-type(3) article:nth-child(odd) span{
         right: -10px;
     }
