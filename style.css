@@ -347,7 +347,9 @@ footer div .icon{
 /* ----------------------------------------
     PAGE PERSONNAGES
    ---------------------------------------- */
-
+.page_perso header {
+    background-color: var(--couleur-accent);
+}
 
 
 
