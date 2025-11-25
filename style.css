@@ -213,6 +213,7 @@ footer div .icon{
 .page-accueil header{
     position: relative;
 }
+
 .page-accueil header img{
     width: 100%;
 }
@@ -312,6 +313,44 @@ footer div .icon{
     max-width: 300px;
 }
 
+/* Liens vers autres pages */
+
+.page-accueil > section:nth-of-type(3){
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.page-accueil > section:nth-of-type(3) article{
+    position: relative;
+}
+
+.page-accueil > section:nth-of-type(3) img{
+    width: 100%;
+}
+
+.page-accueil > section:nth-of-type(3) article span{
+    position: absolute;
+    background: var(--couleur-accent);
+    padding: .5em;
+    border-radius: 8px;
+    top: -10px;
+    right: -10px;
+    transition: all 1s;
+
+    /* Aligner texte au milieu */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-accueil > section:nth-of-type(3) article:hover span{
+    bottom: 0;
+    left: 0;
+    font-size: 5em;
+    border-radius: 40px;
+}
 
 /* Format mobile page accueil */
 @media screen and (max-width: 428px) {
