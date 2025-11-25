@@ -5,6 +5,7 @@
 :root{
     --couleur-accent: #0D5EAF;
     --couleur-survole: #82B0D9;
+    --couleur-gris: #EDEDED;
     --marge-interne : 1em 5em;
 }
 
@@ -221,8 +222,6 @@ main header div.fond-noir{
     background-color: rgba(0, 0, 0, 0.5);
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
 }
 
 
@@ -378,15 +377,3 @@ main > section:nth-of-type(2) img{
 /* Format mobile page lieux */
 @media screen and (max-width: 428px) {}
 
-/* ----------------------------------------
-    PAGE ARTS
-   ---------------------------------------- */
-
-
-
-
-
-
-
-/* Format mobile page arts */
-@media screen and (max-width: 428px) {}
