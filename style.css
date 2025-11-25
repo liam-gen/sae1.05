@@ -347,11 +347,18 @@ footer div .icon{
 /* ----------------------------------------
     PAGE PERSONNAGES
    ---------------------------------------- */
-.page_perso header {
+.page-personnage header {
     background-color: var(--couleur-accent);
 }
 
+.page-personnage nav {
+    background-color: var(--couleur-gris);
+    color: black;
+}
 
+.page-personnage figure {
+    background-color: var(--couleur-accent);
+}
 
 
 /* Format mobile page personnages */
