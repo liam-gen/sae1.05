@@ -421,19 +421,19 @@ footer div .icon{
     font-size: 1.2em;
 }
 
-.page-oeuvres > section article{
+.page-oeuvres > section article, .page-oeuvres > section details{
     padding: 1em;
     position: relative;
     border-radius: 8px;
     width: 100%;
 }
 
-.page-oeuvres > section article:first-child{
+.page-oeuvres > section details{
     background-color: var(--couleur-gris);
     color: black;
 }
 
-.page-oeuvres > section article:first-child h2{
+.page-oeuvres > section details summary{
     font-size: 32px;
 }
 
@@ -472,6 +472,30 @@ footer div .icon{
     font-size: 16px;
     font-weight: 600;
     font-family: Playfair, "Arial", sans-serif;
+}
+
+.page-oeuvres section:last-child{
+    padding: 0;
+    margin: 0;
+}
+
+.page-oeuvres section:last-child div {
+    display: flex;
+    width: 100%;
+}
+
+.page-oeuvres section:last-child figure{
+    padding: 0;
+    margin: 0;
+    flex-basis: 25%;
+}
+
+.page-oeuvres section:last-child img {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 /* Format mobile page arts */
