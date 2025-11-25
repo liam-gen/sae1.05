@@ -417,9 +417,25 @@ footer div .icon{
 /* ----------------------------------------
     PAGE LIEUX
    ---------------------------------------- */
+.page-lieux h1{
+    background-image: url(image-lieux/Image\ Titre.png);
+}
 
 
+.page-lieux header section{
+    color: #0D5EAF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
+.page-lieux header section p{
+    color : black;
+}
+
+.page-lieux h2, h3{
+    margin : 0;
+}
 
 
 /* Format mobile page lieux */
