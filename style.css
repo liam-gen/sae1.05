@@ -377,3 +377,102 @@ main > section:nth-of-type(2) img{
 /* Format mobile page lieux */
 @media screen and (max-width: 428px) {}
 
+/* ----------------------------------------
+    PAGE ARTS
+   ---------------------------------------- */
+
+.page-oeuvres header{
+    position: relative;
+}
+
+.page-oeuvres header img{
+    width: 100%;
+}
+
+.page-oeuvres header div.fond-entree{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 99.5%;
+    background: linear-gradient(to right, var(--couleur-accent), transparent);
+}
+
+.page-oeuvres header div:not(.fond-entree){
+    position: absolute;
+    top: 25%;
+    left: 10%;
+    text-align: left;
+    width: 50em;
+}
+
+.page-oeuvres header div:not(.fond-entree) h1{
+    font-size: 5em;
+    font-weight: bolder;
+    margin: 0;
+}
+
+.page-oeuvres header div:not(.fond-entree) p{
+    font-size: 2em;
+}
+
+.page-oeuvres > section{
+    padding: 1em 5em;
+    font-size: 1.2em;
+}
+
+.page-oeuvres > section article{
+    padding: 1em;
+    position: relative;
+    border-radius: 8px;
+    width: 100%;
+}
+
+.page-oeuvres > section article:first-child{
+    background-color: var(--couleur-gris);
+    color: black;
+}
+
+.page-oeuvres > section article:first-child h2{
+    font-size: 32px;
+}
+
+.page-oeuvres > section article:first-child p{
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.page-oeuvres > section article:last-child {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+}
+
+.page-oeuvres > section article:last-child div {
+    width: 50%;
+}
+
+.page-oeuvres > section article:last-child figure {
+    background-color: var(--couleur-accent);
+    width: 20em;
+    padding: 1em;
+    color: white;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.page-oeuvres > section article:last-child img {
+    height: auto;
+    width: 20em;
+}
+
+.page-oeuvres > section article:last-child p {
+    width: 50%;
+    color: black;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: Playfair, "Arial", sans-serif;
+}
+
+/* Format mobile page arts */
+@media screen and (max-width: 428px) {}
