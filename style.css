@@ -220,9 +220,11 @@ footer div .icon{
 
 .page-accueil header div.fond-noir{
     position: absolute;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.3);
     top: 0;
     left: 0;
+    bottom: 0;
+    right: 0;
 }
 
 
@@ -317,12 +319,21 @@ footer div .icon{
 
 .page-accueil > section:nth-of-type(3){
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     gap: 20px;
+    align-items: center;
+    justify-content: center;
 }
 
 .page-accueil > section:nth-of-type(3) article{
     position: relative;
+    flex-basis: 48%;
+}
+
+.page-accueil > section:nth-of-type(3) article a{
+    text-decoration: none;
+    color: white;
 }
 
 .page-accueil > section:nth-of-type(3) img{
@@ -332,11 +343,13 @@ footer div .icon{
 .page-accueil > section:nth-of-type(3) article span{
     position: absolute;
     background: var(--couleur-accent);
-    padding: .5em;
+    padding: .2em .5em;
     border-radius: 8px;
+    transition: all 1s;
+    font-size: 1.5em;
+
     top: -10px;
     right: -10px;
-    transition: all 1s;
 
     /* Aligner texte au milieu */
 
@@ -348,8 +361,72 @@ footer div .icon{
 .page-accueil > section:nth-of-type(3) article:hover span{
     bottom: 0;
     left: 0;
+    right: 0;
     font-size: 5em;
     border-radius: 40px;
+}
+
+/* Formalités d'entrée */
+
+.page-accueil > section:nth-of-type(4){
+    background-color: var(--couleur-accent);
+    width: 50%;
+    margin: auto;
+    border-radius: 16px;
+    box-shadow: black 0 0 25px 5px;
+    padding: 1em;
+}
+
+.page-accueil > section:nth-of-type(4) header{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.page-accueil > section:nth-of-type(4) header img{
+    width: 50px;
+}
+
+.page-accueil > section:nth-of-type(4) section{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+/* Slider */
+
+.slider{
+    margin: 20px auto;
+    width: 1160px;
+    height: 650px;
+    transition: all 1s ease-in-out;
+    background-image: url("./assets/images/accueil/slider.webp");
+    position: relative;
+    border-radius: 16px;
+}
+
+.slider img{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 50%;
+    bottom: 50%;
+    cursor: pointer;
+}
+
+.slider img:last-child{
+    right: 0;
+    transform: rotate(180deg);
+}
+
+.slider img:active:last-child{
+    transform: scale(1.2) rotate(180deg);
+}
+
+.slider img:active{
+    transform: scale(1.2);
 }
 
 /* Format mobile page accueil */
@@ -381,6 +458,19 @@ footer div .icon{
     .page-accueil header section article{
         padding: .1em .8em;
     }
+
+
+    .page-accueil > section:nth-of-type(3) article{
+        flex-basis: 100%;
+    }
+
+    .page-accueil > section:nth-of-type(3) article:nth-child(odd) span{
+        right: -10px;
+    }
+
+    .page-accueil > section:nth-of-type(3) article:nth-child(even) span{
+        left: -10px;
+    }
 }
 
 /* ----------------------------------------
@@ -398,7 +488,19 @@ footer div .icon{
 .page-personnage figure {
     background-color: var(--couleur-accent);
 }
+.page-personnage article {
+    color: black;
+    background-color: var(--couleur-gris);
+}
 
+.page-personnage section article:nth-child(2) {
+    background-color: var(--couleur-accent);
+    color: white;
+}
+
+.page-personnage figcaption {
+    color: white;
+}
 
 /* Format mobile page personnages */
 @media screen and (max-width: 428px) {}
@@ -417,11 +519,70 @@ footer div .icon{
 /* ----------------------------------------
     PAGE LIEUX
    ---------------------------------------- */
+.page-lieux h1{
+    background-image: url(image-lieux/Image\ Titre.png);
+}
 
 
+.page-lieux header section{
+    color: #0D5EAF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.page-lieux header section p{
+    color : black;
+}
+
+.page-lieux h2, h3{
+    margin : 0;
+}
 
 
+.page-lieux #art1{
+    width: 585px;
+    height: 1667px;
+    background-color: #D9D9D9;
+    color: black;
+    border-radius: 69px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
+.page-lieux #art1 p{
+    margin: 0;
+    height: 880px;
+    width: 508px;
+    font-size: 40px;
+   
+}
+
+.page-lieux #art1 img{
+    width: 486px;
+    height: 721px;
+}
+
+.page-lieux #art2{
+    width: 585px;
+    height: 1667px;
+    border-radius: 69px;
+    color: white;
+    background-color: #173960;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+.page-lieux #art2 p{
+    margin: 0;
+}
+
+.page-lieux section{
+    display: flex;
+    justify-content: space-around;
+}
 /* Format mobile page lieux */
 @media screen and (max-width: 428px) {}
 
