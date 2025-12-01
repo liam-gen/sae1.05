@@ -488,7 +488,19 @@ footer div .icon{
 .page-personnage figure {
     background-color: var(--couleur-accent);
 }
+.page-personnage article {
+    color: black;
+    background-color: var(--couleur-gris);
+}
 
+.page-personnage section article:nth-child(2) {
+    background-color: var(--couleur-accent);
+    color: white;
+}
+
+.page-personnage figcaption {
+    color: white;
+}
 
 /* Format mobile page personnages */
 @media screen and (max-width: 428px) {}
