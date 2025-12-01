@@ -528,6 +528,49 @@ footer div .icon{
 }
 
 
+.page-lieux #art1{
+    width: 585px;
+    height: 1667px;
+    background-color: #D9D9D9;
+    color: black;
+    border-radius: 69px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.page-lieux #art1 p{
+    margin: 0;
+    height: 880px;
+    width: 508px;
+    font-size: 40px;
+   
+}
+
+.page-lieux #art1 img{
+    width: 486px;
+    height: 721px;
+}
+
+.page-lieux #art2{
+    width: 585px;
+    height: 1667px;
+    border-radius: 69px;
+    color: white;
+    background-color: #173960;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+.page-lieux #art2 p{
+    margin: 0;
+}
+
+.page-lieux section{
+    display: flex;
+    justify-content: space-around;
+}
 /* Format mobile page lieux */
 @media screen and (max-width: 428px) {}
 
