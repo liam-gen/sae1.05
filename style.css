@@ -482,6 +482,8 @@ footer div .icon{
 
 .page-oeuvres > section details summary{
     font-size: 24px;
+    font-weight: 600;
+    font-family: Playfair, "Arial", sans-serif;
 }
 
 .page-oeuvres > section > details > p {
@@ -490,7 +492,7 @@ footer div .icon{
 }
 
 .page-oeuvres > section article {
-    width: 80%;
+    width: 100%;
     display: flex;
     justify-content: center;
 }
@@ -499,7 +501,22 @@ footer div .icon{
     width: 50%;
 }
 
-.page-oeuvres > section article figure {
+.page-oeuvres > section article div:first-child figure {
+    background-color: var(--couleur-accent);
+    width: 11em;
+    padding: 1em;
+    color: white;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.page-oeuvres > section article div:first-child img {
+    height: auto;
+    width: 11em;
+    border-radius: 4px;
+}
+
+.page-oeuvres > section article div:last-child figure {
     background-color: var(--couleur-accent);
     width: 20em;
     padding: 1em;
@@ -508,13 +525,15 @@ footer div .icon{
     border-radius: 8px;
 }
 
-.page-oeuvres > section article img {
+.page-oeuvres > section article div:last-child img {
     height: auto;
     width: 20em;
+    border-radius: 4px;
 }
 
 .page-oeuvres > section article p {
-    width: 50%;
+    text-align: center;
+    width: 100%;
     color: black;
     font-size: 16px;
     font-weight: 600;
