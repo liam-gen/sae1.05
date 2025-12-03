@@ -501,34 +501,36 @@ footer div .icon{
     background-color: var(--couleur-accent);
     display: flex;
     flex-direction: column;
-    margin: 20px;
-}
-
-.page-personnage nav {
-    background-color: var(--couleur-gris);
-    color: black;
     
 }
-.page-personnage header figure {
+
+.page-personnage header nav {
+    background-color: var(--couleur-gris);
+    color: black;
+    margin: 5px;
+    width: 25em;
+    font-size: 1.5em;
+}
+.page-personnage header > figure {
     display: flex;
     flex-direction: row-reverse;
 }
 
-.page-personnage header nav  {
-    margin: 5px;
+.page-personnage{
+    margin: 20px;
 }
 
-.page-personnage header figure figcaption {
+.page-personnage header > figure figcaption {
     background-color: var(--couleur-gris);
     color: black;
-    font-size: xx-large;
+    font-size: 1.5em;
     border-radius: 20px;
     box-shadow: 5px 5px black;
 }
 
 .page-personnage header h1 {
     align-self: center;
-    font-size: 10em;
+    font-size: 5em;
 }
 
 .page-personnage figure {
@@ -547,6 +549,16 @@ footer div .icon{
 .page-personnage figcaption {
     color: white;
 }
+
+.pos-nav {
+    display: flex;
+    flex-direction: row;
+}
+
+.page-personnage header nav:nth-child(2) {
+    height: fit-content;
+}
+
 
 
 /* Format mobile page personnages */
