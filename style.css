@@ -545,21 +545,70 @@ footer div .icon{
 /* ----------------------------------------
     PAGE LIEUX
    ---------------------------------------- */
-.page-lieux h1{
-    background-image: url(image-lieux/Image\ Titre.png);
+.page-lieux header{
+    position: relative;
 }
 
+.page-lieux header h1{
+    font-size: 75px;
+    width: 60%;
+}
 
-.page-lieux header section{
+.page-lieux header img{
+    width: 100%;
+}
+
+.page-lieux header div:nth-of-type(1){
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 99.5%;
+    background: linear-gradient(to bottom right, var(--couleur-accent), transparent);
+}
+
+.page-lieux header div:nth-of-type(2){
+    position: absolute;
+    top: 0;
+    left: 6%;
+    text-align: left;
+    width: 50em;
+}
+
+.page-lieux #intro{
     color: #0D5EAF;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.page-lieux header section p{
-    color : black;
+.page-lieux #intro h2{
+    font-size: 56px;
 }
+
+.page-lieux #intro h3{
+    font-size: 37.5px;
+}
+
+.page-lieux #intro p{
+    color : black;
+    text-align: center;
+    font-size: 25px;
+    padding: none;
+    font-weight: bold;
+    height: 336;
+    width: 1273px;
+    
+}
+
+.page-lieux header img{
+    width: 100%;
+}
+
+.page-lieux > img{
+    width: 100%;
+}
+
 
 .page-lieux h2, h3{
     margin : 0;
@@ -581,10 +630,12 @@ footer div .icon{
     margin: 0;
     height: 880px;
     width: 508px;
-    font-size: 40px;
+    font-size: 36px;
+    margin-top: 35px;
+    
    
 }
-
+ 
 .page-lieux #art1 img{
     width: 486px;
     height: 721px;
@@ -599,15 +650,33 @@ footer div .icon{
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
+    justify-content: flex-end;
 }
 
 .page-lieux #art2 p{
-    margin: 0;
+    font-size: 36px;
+    width: 436px;
+    height: 1152px;
+    margin: 1em;
+}
+
+.page-lieux #art2 img{
+    margin-top: 57px;
 }
 
 .page-lieux section{
     display: flex;
     justify-content: space-around;
+}
+
+.page-lieux section:nth-of-type(3){
+    color : red;
+}
+
+.page-lieux details{
+    background-color: #498E9C;
+    height: 140px;
+    width: 1200px;
 }
 /* Format mobile page lieux */
 @media screen and (max-width: 428px) {}
