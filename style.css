@@ -549,19 +549,22 @@ footer div .icon{
 .bio {
     background-image: url(assets/images/personnage/giannisbio.jpg);
     background-position-x: 0;
-    background-position-y: -50em;
+    background-position-y: -20em;
+    background-size: cover;
+    border-radius: 20px;
+    box-shadow: 0 0 20px black;
 }
 
 .bio p {
     height: 0;
+    font-weight: 900;
     opacity: 0;
-    
     transition: all 1s ease 0.1s;
 }
 
 .bio:hover p{
-    height: 25em;
-    letter-spacing: 5px;
+    height: 10em;
+    letter-spacing: 2px;
     opacity: 1;
 }
 
@@ -571,11 +574,24 @@ footer div .icon{
     font-size: 25px;
     line-height: 1.5em;
     width: 40%;
+    height: fit-content;
 }
 
-.page-personnage section > article {
+.page-personnage section article:first-child {
     width: 60%;
-    height: auto;
+    background-image: url(assets/images/personnage/giannisbio.jpg);
+}
+
+.page-personnage section article:first-child p {
+    height: 0;
+    font-weight: 900;
+    opacity: 0;
+    transition: all 1s ease 0.1s;
+}
+
+.page-personnage section article:first-child:hover p {
+    height: 25em;
+    opacity: 1;
 }
 
 .page-personnage h2 {
@@ -604,6 +620,10 @@ footer div .icon{
 .page-personnage section {
     display: flex;
     flex-direction: row;
+}
+
+.video {
+    background: url(assets/images/personnage/videogiannis.mp4);
 }
 
 
