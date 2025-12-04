@@ -551,18 +551,18 @@ footer div .icon{
     background-position-x: 0;
     background-position-y: -50em;
 }
-.bio h2 {
-    transition: letter-spacing 1s ease 0.1s;
-}
+
 .bio p {
-    display: none;
+    height: 0;
+    opacity: 0;
+    
     transition: all 1s ease 0.1s;
 }
 
-.bio h2:hover + p{
+.bio:hover p{
     height: 25em;
     letter-spacing: 5px;
-    display: block; 
+    opacity: 1;
 }
 
 .page-personnage section article:nth-child(2) {
