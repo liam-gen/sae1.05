@@ -592,22 +592,21 @@ footer div .icon{
 
 .page-oeuvres header{
     position: relative;
-}
-
-.page-oeuvres header img{
+    background-image: url(./assets/images/oeuvres/image_entree.png);
+    height: 50em;
     width: 100%;
 }
 
-.page-oeuvres header div.fond-entree{
+.page-oeuvres header div:nth-of-type(1){
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 99.5%;
+    height: 100%;
     background: linear-gradient(to bottom right, var(--couleur-accent), transparent);
 }
 
-.page-oeuvres header div:not(.fond-entree){
+.page-oeuvres header div:nth-of-type(2){
     position: absolute;
     top: 25%;
     left: 10%;
@@ -615,54 +614,61 @@ footer div .icon{
     width: 50em;
 }
 
-.page-oeuvres header div:not(.fond-entree) h1{
+.page-oeuvres header div:nth-of-type(2) h1{
     font-size: 5em;
     font-weight: bolder;
     margin: 0;
 }
 
-.page-oeuvres header div:not(.fond-entree) p{
+.page-oeuvres header div:nth-of-type(2) p{
     font-size: 2em;
 }
 
-.page-oeuvres > section{
+.page-oeuvres > section:nth-of-type(1){
     padding: 1em 5em;
 }
 
-.page-oeuvres > section article, .page-oeuvres > section details{
+.page-oeuvres > section:nth-of-type(1) article, .page-oeuvres > section details{
     padding: 1em;
     position: relative;
     border-radius: 8px;
     width: 100%;
 }
 
-.page-oeuvres > section details{
+.page-oeuvres > section:nth-of-type(1) details{
     background-color: var(--couleur-gris);
     color: black;
 }
 
-.page-oeuvres > section details summary{
+.page-oeuvres > section:nth-of-type(1) details summary{
     font-size: 24px;
     font-weight: 600;
     font-family: Playfair, "Arial", sans-serif;
 }
 
-.page-oeuvres > section > details > p {
+.page-oeuvres > section:nth-of-type(1) > details > p {
     font-size: 16px;
     font-weight: 600;
 }
 
-.page-oeuvres > section article {
+#menu, #content{
+    overflow: hidden;
+    height: 0;
+    transition: height 0.3s ease;
+}
+
+.page-oeuvres > section:nth-of-type(1) article {
     width: 100%;
     display: flex;
     justify-content: center;
+    position: relative;
 }
 
-.page-oeuvres > section article div {
+.page-oeuvres > section:nth-of-type(1) article div {
     width: 50%;
 }
 
-.page-oeuvres > section article div:first-child figure {
+.page-oeuvres > section:nth-of-type(1) article div:first-child figure {
     background-color: var(--couleur-accent);
     width: 11em;
     padding: 1em;
@@ -671,13 +677,13 @@ footer div .icon{
     border-radius: 8px;
 }
 
-.page-oeuvres > section article div:first-child img {
+.page-oeuvres > section:nth-of-type(1) article div:first-child img {
     height: auto;
     width: 11em;
     border-radius: 4px;
 }
 
-.page-oeuvres > section article div:last-child figure {
+.page-oeuvres > section:nth-of-type(1) article div:last-child figure {
     background-color: var(--couleur-accent);
     width: 20em;
     padding: 1em;
@@ -686,13 +692,13 @@ footer div .icon{
     border-radius: 8px;
 }
 
-.page-oeuvres > section article div:last-child img {
+.page-oeuvres > section:nth-of-type(1) article div:last-child img {
     height: auto;
     width: 20em;
     border-radius: 4px;
 }
 
-.page-oeuvres > section article p {
+.page-oeuvres > section:nth-of-type(1) article p {
     text-align: center;
     width: 100%;
     color: black;
@@ -764,10 +770,30 @@ footer div .icon{
 }
 
 .page-oeuvres > section:nth-of-type(3) {
-    margin: 2em;
+    margin: 2em 4em;
+}
+
+.page-oeuvres > section:nth-of-type(3) {
+    display: flex;
+    color: black;
+    gap: 5%;
 }
 
 .page-oeuvres > section:nth-of-type(3) iframe {
+    border-radius: 10px;
+    align-self: center;
+}
+
+.page-oeuvres > section:nth-of-type(3) article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: justify;
+}
+
+.page-oeuvres > section:nth-of-type(3) article figure img{
+    width: 90%;
+    height: auto;
     border-radius: 10px;
 }
 

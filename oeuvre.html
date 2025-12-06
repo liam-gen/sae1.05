@@ -43,8 +43,6 @@
     <main class="page-oeuvres">
         <header>
             <div class="fond-entree"></div>
-            <img src="./assets/images/accueil/image_entree_copie.png" alt="Image de présentation">
-
             <div>
                 <h1>Découvrez l'art<br>grec antique</h1>
                 <p>Voyez l’Aurige de Delphes, l’un des plus beaux vestiges de l’art grec antique...</p>
@@ -52,11 +50,11 @@
             </div>
         </header>
         <section>
-            <details close="close">
-                <summary>L’art grec ancien</summary>
-                <p>Les historiens de l'art définissent généralement l'art grec ancien comme l'art produit dans la région parlant le grec entre le XIIIe et le Ier siècle av. J.-C. Ils excluent généralement l'art des civilisations minoenne et mycénienne, qui existaient entre le XVe et le XIIe siècle av. J.-C. Bien qu'il se soit agi de cultures parlant le grec, il n'existe que peu ou pas de continuité entre l'art de ces civilisations et l'art grec  ultérieur.<br>
+            <details close="close" class="accordion">
+                <summary>Découvrir plus sur l’art grec ancien</summary>
+                <p class="content">Les historiens de l'art définissent généralement l'art grec ancien comme l'art produit dans la région parlant le grec entre le XIIIe et le Ier siècle av. J.-C. Ils excluent généralement l'art des civilisations minoenne et mycénienne, qui existaient entre le XVe et le XIIe siècle av. J.-C. Bien qu'il se soit agi de cultures parlant le grec, il n'existe que peu ou pas de continuité entre l'art de ces civilisations et l'art grec  ultérieur.<br>
                 <br>À l'autre bout de l'échelle de temps, les historiens de l'art  s'accordent généralement pour dire que l'art grec ancien se termine avec l'établissement de la culture romaine dans le monde parlant le grec.  Après cette date, ils estiment que l'art gréco-romain, malgré ses  réalisations monumentales, s'est inspiré des modèles grecs plus anciens  et a décliné lentement en qualité jusqu'à ce que l'avènement du christianisme mette fin à la période classique vers le Ve siècle.</p>
-                </details>
+            </details>
             <article>
                 <div>
                     <figure>
@@ -115,7 +113,14 @@
             </div>
         </section>
         <section>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3123.3269517757635!2d22.49702047543061!3d38.480096971219545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x135f797aa96fe533%3A0x6b00be44fb12457e!2sMus%C3%A9e%20arch%C3%A9ologique%20de%20Delphes!5e0!3m2!1sfr!2sfr!4v1764622187614!5m2!1sfr!2sfr" width="400" height="700" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3123.3269517757635!2d22.49702047543061!3d38.480096971219545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x135f797aa96fe533%3A0x6b00be44fb12457e!2sMus%C3%A9e%20arch%C3%A9ologique%20de%20Delphes!5e0!3m2!1sfr!2sfr!4v1764622187614!5m2!1sfr!2sfr" width="600" height="700" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <article>
+                <p>Le <strong>musée archéologique de Delphes</strong> est un des principaux musées de Grèce, et un des plus visités. Il dépend du ministère grec de la Culture (dixième éphorat des antiquités préhistoriques et classiques). 
+                Fondé en 1903, réaménagé à plusieurs reprises, il abrite les découvertes faites sur le sanctuaire panhellénique de Delphes datant de la Préhistoire à l'Antiquité tardive. Organisé en quatorze salles sur deux étages, le musée expose principalement des statues, dont le célèbre « Aurige de Delphes », des éléments d'architecture comme la frise du trésor des Siphniens ou des offrandes faites au sanctuaire d'Apollon pythien comme le sphinx des Naxiens.</p>
+                <figure>
+                    <img src="./assets/images/oeuvres/musee.jpg" alt="musée archéologique de delphes">
+                </figure>
+            </article>
         </section>
     </main>
     <footer>
@@ -142,5 +147,6 @@
     </footer>
 
     <script src="./assets/scripts/script.js"></script>
+    <script src="./assets/scripts/details.js"></script>
 </body>
 </html>
