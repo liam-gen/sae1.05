@@ -210,11 +210,17 @@ footer div .icon{
     PAGE ACCUEIL
    ---------------------------------------- */
 
+.page-accueil{
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
 .page-accueil header{
     position: relative;
 }
 
-.page-accueil header img{
+.page-accueil header video{
     width: 100%;
 }
 
@@ -276,12 +282,15 @@ footer div .icon{
 .page-accueil > section:nth-of-type(1){
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .page-accueil > section:nth-of-type(1) div{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    gap: 10px;
 }
 
 .page-accueil > section:nth-of-type(1) article{
@@ -291,6 +300,10 @@ footer div .icon{
     border-radius: 8px;
 }
 
+.page-accueil > section:nth-of-type(1) iframe{
+    width: 49%;
+}
+
 .page-accueil > section:nth-of-type(1) article h4{
     position: absolute;
     margin: 0;
@@ -298,6 +311,14 @@ footer div .icon{
     right: 20px;
     font-weight: bolder;
     font-size: 2.5em;
+}
+
+.page-accueil > section:nth-of-type(1) article img{
+    width: 50px;
+    position: absolute;
+    margin: 0;
+    top: 20px;
+    right: 20px;
 }
 
 .page-accueil > section:nth-of-type(2) article{
@@ -478,11 +499,40 @@ footer div .icon{
    ---------------------------------------- */
 .page-personnage header {
     background-color: var(--couleur-accent);
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    padding: 10px;
 }
 
-.page-personnage nav {
+.page-personnage header nav {
     background-color: var(--couleur-gris);
     color: black;
+    margin: 5px;
+    width: 25em;
+    font-size: 25px;
+}
+.page-personnage header > figure {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.page-personnage{
+    margin: 20px;
+}
+
+.page-personnage header > figure figcaption {
+    background-color: var(--couleur-gris);
+    color: black;
+    font-size: 25px;
+    border-radius: 20px;
+    box-shadow: 5px 5px black;
+    padding: 10px;
+}
+
+.page-personnage header h1 {
+    align-self: center;
+    font-size: 75px;
 }
 
 .page-personnage figure {
@@ -491,16 +541,91 @@ footer div .icon{
 .page-personnage article {
     color: black;
     background-color: var(--couleur-gris);
+    padding: 20px;
+    margin: 10px;
+    
+}
+
+.bio {
+    background-image: url(assets/images/personnage/giannisbio.jpg);
+    background-position-x: 0;
+    background-position-y: -20em;
+    background-size: cover;
+    border-radius: 20px;
+    box-shadow: 0 0 20px black;
+}
+
+.bio p {
+    height: 0;
+    font-weight: 900;
+    opacity: 0;
+    transition: all 1s ease 0.1s;
+}
+
+.bio:hover p{
+    height: 10em;
+    letter-spacing: 2px;
+    opacity: 1;
 }
 
 .page-personnage section article:nth-child(2) {
     background-color: var(--couleur-accent);
     color: white;
+    font-size: 25px;
+    line-height: 1.5em;
+    width: 40%;
+    height: fit-content;
+}
+
+.page-personnage section article:first-child {
+    width: 60%;
+    background-image: url(assets/images/personnage/giannisbio.jpg);
+}
+
+.page-personnage section article:first-child p {
+    height: 0;
+    font-weight: 900;
+    opacity: 0;
+    transition: all 1s ease 0.1s;
+}
+
+.page-personnage section article:first-child:hover p {
+    height: 25em;
+    opacity: 1;
+}
+
+.page-personnage h2 {
+    text-align: center;
+    font-size: 50px;
 }
 
 .page-personnage figcaption {
     color: white;
 }
+
+.pos-nav {
+    display: flex;
+    flex-direction: row;
+}
+
+.page-personnage header nav:nth-child(2) {
+    height: fit-content;
+}
+
+.page-personnage p {
+    font-size: 25px;
+    line-height: 1.5em;
+}
+
+.page-personnage section {
+    display: flex;
+    flex-direction: row;
+}
+
+.video {
+    background: url(assets/images/personnage/videogiannis.mp4);
+}
+
 
 /* Format mobile page personnages */
 @media screen and (max-width: 428px) {}
@@ -519,21 +644,70 @@ footer div .icon{
 /* ----------------------------------------
     PAGE LIEUX
    ---------------------------------------- */
-.page-lieux h1{
-    background-image: url(image-lieux/Image\ Titre.png);
+.page-lieux header{
+    position: relative;
 }
 
+.page-lieux header h1{
+    font-size: 75px;
+    width: 60%;
+}
 
-.page-lieux header section{
+.page-lieux header img{
+    width: 100%;
+}
+
+.page-lieux header div:nth-of-type(1){
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 99.5%;
+    background: linear-gradient(to bottom right, var(--couleur-accent), transparent);
+}
+
+.page-lieux header div:nth-of-type(2){
+    position: absolute;
+    top: 0;
+    left: 6%;
+    text-align: left;
+    width: 50em;
+}
+
+.page-lieux #intro{
     color: #0D5EAF;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.page-lieux header section p{
-    color : black;
+.page-lieux #intro h2{
+    font-size: 56px;
 }
+
+.page-lieux #intro h3{
+    font-size: 37.5px;
+}
+
+.page-lieux #intro p{
+    color : black;
+    text-align: center;
+    font-size: 25px;
+    padding: none;
+    font-weight: bold;
+    height: 336;
+    width: 1273px;
+    
+}
+
+.page-lieux header img{
+    width: 100%;
+}
+
+.page-lieux > img{
+    width: 100%;
+}
+
 
 .page-lieux h2, h3{
     margin : 0;
@@ -555,10 +729,12 @@ footer div .icon{
     margin: 0;
     height: 880px;
     width: 508px;
-    font-size: 40px;
+    font-size: 36px;
+    margin-top: 35px;
+    
    
 }
-
+ 
 .page-lieux #art1 img{
     width: 486px;
     height: 721px;
@@ -573,15 +749,33 @@ footer div .icon{
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
+    justify-content: flex-end;
 }
 
 .page-lieux #art2 p{
-    margin: 0;
+    font-size: 36px;
+    width: 436px;
+    height: 1152px;
+    margin: 1em;
+}
+
+.page-lieux #art2 img{
+    margin-top: 57px;
 }
 
 .page-lieux section{
     display: flex;
     justify-content: space-around;
+}
+
+.page-lieux section:nth-of-type(3){
+    color : red;
+}
+
+.page-lieux details{
+    background-color: #498E9C;
+    height: 140px;
+    width: 1200px;
 }
 /* Format mobile page lieux */
 @media screen and (max-width: 428px) {}
