@@ -580,6 +580,10 @@ footer div .icon{
 .page-personnage section article:first-child {
     width: 60%;
     background-image: url(assets/images/personnage/giannisbio.jpg);
+    border-radius: 20px;
+    box-shadow: 0 5px 20px black;
+    background-position-x: 0;
+    background-position-y: -50em;
 }
 
 .page-personnage section article:first-child p {
@@ -589,8 +593,10 @@ footer div .icon{
     transition: all 1s ease 0.1s;
 }
 
-.page-personnage section article:first-child:hover p {
-    height: 25em;
+
+
+.page-personnage section article:first-child:hover p{
+    height: 14em;
     opacity: 1;
 }
 
@@ -622,9 +628,7 @@ footer div .icon{
     flex-direction: row;
 }
 
-.video {
-    background: url(assets/images/personnage/videogiannis.mp4);
-}
+
 
 
 /* Format mobile page personnages */
