@@ -379,12 +379,17 @@ footer div .icon{
     align-items: center;
 }
 
-.page-accueil > section:nth-of-type(3) article:hover span{
+.page-accueil > section:nth-of-type(3) article a:hover span{
+    background: rgb(13, 94, 175, 0.3);
+    backdrop-filter: blur(20px);
+    
+    top: 0;
+    right: 0;
     bottom: 0;
     left: 0;
-    right: 0;
-    font-size: 5em;
-    border-radius: 40px;
+
+    font-size: 4em;
+    border-radius: 20px;
 }
 
 /* Formalités d'entrée */
