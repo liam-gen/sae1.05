@@ -658,24 +658,39 @@ footer div .icon{
     flex-direction: row;
 }
 
-.grece figure{
-    display: flex;
-    width: fit-content;
-    margin: auto;
-    
-}
 
-.grece figure:hover p{
-    display: block;
-    width: 100%;
-}
 .grece figure figcaption {
     display: none
 }
 
-.grece p{
-    overflow: hidden;
+.grece figure {
+    display: flex;
+    height: fit-content;
+    width: fit-content;
+    margin: auto;
+    transition: all 1s ease-in-out 0.1s;
+    
 }
+
+.grece figure p{
+    overflow: hidden;
+    opacity: 0;
+    width: fit-content;
+    
+}
+
+.grece figure:hover p {
+    opacity: 1;
+    letter-spacing: 2px;
+    width: fit-content;
+}
+
+
+
+.grece figure figcaption {
+    display: none
+}
+
 
 
 
