@@ -442,14 +442,11 @@ body > aside a{
 
 /* Formalités d'entrée */
 
-.page-accueil > section:nth-of-type(4){
-    background-color: whitesmoke;
+.page-accueil > section:nth-of-type(4) h3{
     color: black;
-    width: 85%;
-    margin: auto;
-    border-radius: 16px;
-    box-shadow: black 0 0 50px 1px;
-    padding: 1em;
+    text-align: center;
+    margin-bottom: 30px;
+    width: 100%;
 }
 
 .page-accueil > section:nth-of-type(4) header{
@@ -471,6 +468,15 @@ body > aside a{
     gap: 30px;
 
     font-family: Inter, Arial, sans-serif;
+
+
+    background-color: whitesmoke;
+    color: black;
+    width: 85%;
+    margin: auto;
+    border-radius: 16px;
+    box-shadow: black 0 0 50px 1px;
+    padding: 1em;
 }
 
 .page-accueil > section:nth-of-type(4) article ul{
@@ -484,9 +490,26 @@ body > aside a{
 }
 
 
-.page-accueil > section:nth-of-type(4) section article:first-child{
-    
+.page-accueil > section:nth-of-type(4) section article:first-child h4{
+    color: var(--couleur-accent)
 }
+
+.page-accueil > section:nth-of-type(4) section article:first-child ul li{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.page-accueil > section:nth-of-type(4) section article:first-child i{
+    background-color: green;
+    mask: url('./assets/icons/carte-identite.svg') no-repeat center;
+    -webkit-mask: url('./assets/icons/carte-identite.svg') no-repeat center;
+    width: 40px;
+    height: 40px;
+    display: block;
+}
+
+ 
 
 .page-accueil > section:nth-of-type(4) section article:last-child{
     background: var(--couleur-accent);
