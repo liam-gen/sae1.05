@@ -87,6 +87,19 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         })
     }
+})
 
-    
+document.addEventListener("scroll", () => {
+    let bouton = document.querySelector("body > aside")
+
+    if(bouton){
+        if(window.scrollY > 400){
+            bouton.style.opacity = "1";
+            bouton.style.pointerEvents = "auto"
+        }
+        else{
+            bouton.style.opacity = "0";
+            bouton.style.pointerEvents = "none"
+        }
+    }
 })
