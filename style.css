@@ -527,6 +527,8 @@ footer div .icon{
     margin: 5px;
     width: 25em;
     font-size: 25px;
+    border-radius: 20px;
+    box-shadow: 5px 5px black;
 }
 .page-personnage header > figure {
     display: flex;
@@ -642,12 +644,18 @@ footer div .icon{
 .pos-nav {
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.pos-nav nav:nth-child(2) {
+    width: auto;
 }
 
 
 .pos-nav nav:nth-child(2) ul li {
     display: inline-block;
-    padding: 20px;
+    padding: 10px;
+    margin: 20px;
     list-style: none;
 }
 
