@@ -644,8 +644,16 @@ footer div .icon{
     flex-direction: row;
 }
 
+
+.pos-nav nav:nth-child(2) ul li {
+    display: inline-block;
+    padding: 20px;
+    list-style: none;
+}
+
 .page-personnage header nav:nth-child(2) {
     height: fit-content;
+
 }
 
 .page-personnage p {
@@ -669,6 +677,11 @@ footer div .icon{
     flex-direction: row;
     width: fit-content;
     margin: auto;
+    border-radius: 20px;
+}
+
+.grece figure img {
+    border-radius: 20px;
 }
 
 .grece figure p {
@@ -676,6 +689,8 @@ footer div .icon{
     width: 0;
     height: 0;
     overflow: hidden;
+    color: white;
+    padding: 10px;
     transition: all 1s ease 0.1s;
 }
 
@@ -694,6 +709,21 @@ footer div .icon{
 .grece figure figcaption {
     display: none
 }
+
+.page-personnage article:last-child {
+    border-radius: 20px;
+}
+
+.page-personnage a {
+    text-decoration: none;
+    color: var(--couleur-accent);
+}
+
+.page-personnage a:hover {
+    background-color: var(--couleur-survole);
+    color: white;
+}
+
 
 
 
