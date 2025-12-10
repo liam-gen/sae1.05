@@ -665,7 +665,7 @@ footer div .icon{
     display: flex;
     margin: auto;
     width: fit-content;
-    
+    transition: all 1s ease-in-out 0.1s;
 }
 
 .grece figure p{
@@ -673,14 +673,18 @@ footer div .icon{
     height: 10em;
     overflow: hidden;
     opacity: 0;
-    transition: all 1s ease-in-out 0.1s;
+    width: fit-content;
 }
 
 .grece figure:hover p {
     opacity: 1;
-    width: fit-content;
+    letter-spacing: 2px;
+    
 }
 
+.grece figure:hover {
+    width: fit-content;
+}
 
 /* Format mobile page personnages */
 @media screen and (max-width: 428px) {}
