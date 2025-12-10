@@ -3,7 +3,7 @@
 /* Variables */
 
 :root{
-    --couleur-accent: #0D5EAF;
+    --couleur-accent: #0d5eaf;
     --couleur-survole: #82B0D9;
     --couleur-gris: #EDEDED;
     --marge-interne : 1em 5em;
@@ -297,11 +297,22 @@ footer div .icon{
     background-color: var(--couleur-accent);
     padding: 1em;
     position: relative;
-    border-radius: 8px;
+    border-radius: 16px;
+    transition: all 1s;
+    cursor: pointer;
 }
+
+.page-accueil > section:nth-of-type(1) article:hover{
+    box-shadow: 0 0 30px 1px black;
+    transform: scale(1.01);
+}
+
+
 
 .page-accueil > section:nth-of-type(1) iframe{
     width: 49%;
+    border: none;
+    border-radius: 16px;
 }
 
 .page-accueil > section:nth-of-type(1) article h4{
@@ -317,8 +328,8 @@ footer div .icon{
     width: 50px;
     position: absolute;
     margin: 0;
-    top: 20px;
-    right: 20px;
+    top: 10px;
+    right: 10px;
 }
 
 .page-accueil > section:nth-of-type(2) article{
@@ -328,8 +339,12 @@ footer div .icon{
     justify-content: space-between;
     gap: 20px;
     color: black;
-    box-shadow: 0 0 25px 5px black;
+    box-shadow: 0 0 25px 5px gray;
     font-size: 1.5em;
+}
+
+.page-accueil > section:nth-of-type(2) article strong{
+    color: var(--couleur-accent)
 }
 
 .page-accueil > section:nth-of-type(2) img{
@@ -379,12 +394,17 @@ footer div .icon{
     align-items: center;
 }
 
-.page-accueil > section:nth-of-type(3) article:hover span{
+.page-accueil > section:nth-of-type(3) article a:hover span{
+    background: rgb(13, 94, 175, 0.3);
+    backdrop-filter: blur(20px);
+    
+    top: 0;
+    right: 0;
     bottom: 0;
     left: 0;
-    right: 0;
-    font-size: 5em;
-    border-radius: 40px;
+
+    font-size: 4em;
+    border-radius: 20px;
 }
 
 /* Formalités d'entrée */
@@ -555,18 +575,23 @@ footer div .icon{
 .bio p {
     height: 0;
     opacity: 0;
-    
+    overflow: hidden;
+    margin: 0;
     transition: all 1s ease 0.1s;
 }
 
 .bio:hover p{
-    height: 25em;
-    letter-spacing: 5px;
+    height: 11em;
+    letter-spacing: 2px;
     opacity: 1;
+    backdrop-filter: blur(100px);
 }
 
 .page-personnage section article:nth-child(2) {
     background-color: var(--couleur-accent);
+    box-shadow: 0 5px 20px black;
+    border-radius: 20px;
+    /*background: radial-gradient(rgba(13,94,175,0.2),rgba(13,94,175,0.4), rgba(13,94,175,0.8), rgba(13,94,175,1));*/
     color: white;
     font-size: 25px;
     line-height: 1.5em;
@@ -575,7 +600,33 @@ footer div .icon{
 
 .page-personnage section > article {
     width: 60%;
-    height: auto;
+    background-image: url(assets/images/personnage/giannisbio.jpg);
+    border-radius: 20px;
+    box-shadow: 0 5px 20px black;
+    background-position-x: 0;
+    background-position-y: -50em;
+}
+/*.page-personnage section article:first-child div:hover {
+    transition: all 1s ease;
+    transform: rotateY(360deg);
+}*/
+
+.page-personnage section article:first-child p {
+    height: 0;
+    font-weight: 900;
+    opacity: 0;
+    margin: 0;
+    overflow: hidden;
+    backdrop-filter: blur(100px);
+    transition: all 1s ease 0.1s;
+}
+
+
+
+.page-personnage section article:first-child:hover p{
+    height: 17em;
+    opacity: 1;
+    
 }
 
 .page-personnage h2 {
@@ -604,6 +655,22 @@ footer div .icon{
 .page-personnage section {
     display: flex;
     flex-direction: row;
+}
+
+
+.grece figure figcaption {
+    display: none
+}
+
+.grece figure {
+    display: flex;
+}
+
+.grece figure p{
+    width: 0;
+    height: 10em;
+    /*overflow: hidden;*/
+
 }
 
 
