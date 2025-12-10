@@ -1,6 +1,11 @@
 /* Script JS */
 
 document.addEventListener("DOMContentLoaded", () => {
+
+    if(AOS){
+        AOS.init();
+    }
+    
     /* Page changée */
 
     // Gestion menu
