@@ -642,25 +642,21 @@ footer div .icon{
     flex-direction: row;
 }
 
-.grece figure{
-    display: flex;
-    width: fit-content;
-    margin: auto;
-    
-}
 
-.grece figure:hover p{
-    display: block;
-    width: 100%;
-}
 .grece figure figcaption {
     display: none
 }
 
-.grece p{
-    overflow: hidden;
+.grece figure {
+    display: flex;
 }
 
+.grece figure p{
+    width: 0;
+    height: 10em;
+    /*overflow: hidden;*/
+
+}
 
 
 /* Format mobile page personnages */
