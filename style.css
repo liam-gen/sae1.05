@@ -1325,7 +1325,8 @@ footer div .icon{
 
 .page-oeuvres header{
     position: relative;
-    background: no-repeat url(./assets/images/oeuvres/image_entree.png) cover;
+    background: no-repeat url(./assets/images/oeuvres/image_entree.png);
+    background-size: cover;
     height: 50em;
     width: 100%;
 }
