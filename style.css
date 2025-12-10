@@ -556,15 +556,20 @@ body > aside a{
 .page-personnage header nav {
     background-color: var(--couleur-gris);
     color: black;
+    font-weight: bold;
     margin: 5px;
     width: 25em;
-    font-size: 25px;
+    font-size: 30px;
     border-radius: 20px;
     box-shadow: 5px 5px black;
+    padding: 20px;
 }
+
+
 .page-personnage header > figure {
     display: flex;
     flex-direction: row-reverse;
+    
 }
 
 .page-personnage{
@@ -578,6 +583,8 @@ body > aside a{
     border-radius: 20px;
     box-shadow: 5px 5px black;
     padding: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
 }
 
 .page-personnage header h1 {
