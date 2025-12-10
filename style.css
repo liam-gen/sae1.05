@@ -1534,5 +1534,21 @@ footer div .icon{
     border-radius: 10px;
 }
 
+.page-oeuvres footer {
+  height: 180px;
+  width: 89.5%;
+  overflow: hidden;
+  background-image: url('./assets/images/oeuvres/ancient-greece-battle-scene-horizontal-260nw-1789236434.jpg');
+  background-repeat: repeat-x;
+  background-position: 0 50%;
+  background-size: auto 100%; /* ajuste si tu veux forcer la hauteur de l'image */
+  animation: frise 18s linear infinite;
+}
+
+@keyframes frise {
+  from { background-position: 0 50%; }
+  to   { background-position: -1000px 50%; } /* -1000px = distance à parcourir ; ajuste si besoin */
+}
+
 /* Format mobile page arts */
 @media screen and (max-width: 428px) {}
