@@ -570,6 +570,8 @@ footer div .icon{
     background-image: url(assets/images/personnage/giannisbio.jpg);
     background-position-x: 0;
     background-position-y: -50em;
+    border-radius: 20px;
+    box-shadow: 0 0 5px black;
 }
 
 .bio p {
@@ -598,7 +600,7 @@ footer div .icon{
     width: 40%;
 }
 
-.page-personnage section > article {
+.page-personnage section  article:first-child {
     width: 60%;
     background-image: url(assets/images/personnage/giannisbio.jpg);
     border-radius: 20px;
@@ -669,7 +671,7 @@ footer div .icon{
 .grece figure p{
     width: 0;
     height: 10em;
-    /*overflow: hidden;*/
+    overflow: hidden;
 
 }
 
