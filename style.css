@@ -918,6 +918,7 @@ body > aside a{
     text-align: center;
     display: flex;
     flex-direction: column;
+    overflow: hidden; 
 }
 
 .carte-plat h3 {
@@ -931,6 +932,11 @@ body > aside a{
     width: 100%;
     height: 250px;     
     object-fit: cover;
+    transition: transform 0.5s ease; /* L'animation durera 0.5 secondes */
+}
+
+.carte-plat:hover img {
+    transform: scale(1.1); /* Agrandit l'image de 10% */
 }
 
 .carte-plat p {
@@ -955,6 +961,13 @@ body > aside a{
     max-width: 100%; 
     height: auto;
     border-radius: 4px;
+    /* Ajout de l'animation fluide */
+    transition: transform 0.5s ease;
+    cursor: pointer;
+}
+
+.col-boisson img:hover {
+    transform: scale(1.1);
 }
 
 .col-boisson h3 {
@@ -980,6 +993,12 @@ body > aside a{
 
 .boisson-content.inverse img {
     width: 40%; 
+    transition: transform 0.5s ease; /* Ajout de la fluidité */
+    cursor: pointer;
+}
+
+.boisson-content.inverse img:hover {
+    transform: scale(1.1); /* Zoom */
 }
 
 .boisson-content.inverse div {
