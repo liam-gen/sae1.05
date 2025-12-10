@@ -8,6 +8,10 @@
 
     <link rel="stylesheet" href="./style.css">
 
+    <!-- animations scroll -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
     <meta name="description" content="Office du tourisme de Grèce">
     <meta name="keywords" content="grece, tourisme">
     <meta name="author" content="CHARPENTIER Liam">
@@ -55,7 +59,7 @@
                     </article>
                     <article>
                         <img src="./assets/icons/chart.svg" alt="Densité">
-                        <h2>79 hab. /km2</h2>
+                        <h2>79 hab. /km<sup>2</sup></h2>
                     </article>
                 </section>
             </div>
@@ -66,17 +70,17 @@
             <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=15.776367187500002%2C34.34343606848294%2C30.278320312500004%2C42.09007006868398&amp;layer=mapnik"></iframe><br/>
             
             <div>
-                <article>
+                <article data-aos="fade-left">
                     <h3>Grec moderne</h3>
                     <h4>Ελληνικά</h4>
                     <p>L'une des langues les plus anciennes encore parlée</p>
                 </article>
-                <article>
+                <article data-aos="fade-left">
                     <h3>Euro</h3>
                     <img src="./assets/icons/euro.svg" alt="Monnaie : Euro">
                     <p>Membre de la zone euro depuis 2001</p>
                 </article>
-                <article>
+                <article data-aos="fade-left">
                     <h3>L’hymne à la liberté</h3>
                     <img src="./assets/icons/music.svg" alt="Hynme grec">
                     <p>L'hymne célèbre la lutte pour l'indépendance grecque et incarne l'esprit de liberté du peuple</p>
@@ -86,7 +90,7 @@
 
         <section>
             <article>
-                <img src="./assets/images/accueil/drapeau.png" alt="Drapeau de la Grèce">
+                <img data-aos="flip-left" src="./assets/images/accueil/drapeau.png" alt="Drapeau de la Grèce">
                 <p>Le drapeau grec se compose de neuf bandes horizontales bleues et  blanches alternées, avec une croix blanche sur fond bleu dans le canton  supérieur gauche. Les neuf bandes représentent les neuf syllabes de la  devise <strong>"Ελευθερία ή Θάνατος"</strong> (Liberté ou Mort).</p>
             </article>
         </section>
@@ -150,6 +154,7 @@
         </div>
     </footer>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./assets/scripts/script.js"></script>
 </body>
 </html>
