@@ -378,15 +378,20 @@ footer div .icon{
 
 .page-accueil > section:nth-of-type(3) article span{
     position: absolute;
-    background: var(--couleur-accent);
-    padding: .2em .5em;
-    border-radius: 8px;
+    border-radius: 25px;
     transition: all 1s;
     font-size: 1.5em;
 
-    top: -10px;
-    right: -10px;
+    background: rgb(13, 94, 175, 0.3);
+    backdrop-filter: blur(20px);
 
+    top: 0;
+    right: 0;
+    bottom: 4px; /* sans espace image en bas*/
+    left: 0;
+
+    font-size: 4em;
+    opacity: 0;
     /* Aligner texte au milieu */
 
     display: flex;
@@ -395,16 +400,7 @@ footer div .icon{
 }
 
 .page-accueil > section:nth-of-type(3) article a:hover span{
-    background: rgb(13, 94, 175, 0.3);
-    backdrop-filter: blur(20px);
-    
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-
-    font-size: 4em;
-    border-radius: 20px;
+    opacity: 1;
 }
 
 /* Formalités d'entrée */
@@ -1344,7 +1340,8 @@ footer div .icon{
 
 .page-oeuvres header{
     position: relative;
-    background-image: url(./assets/images/oeuvres/image_entree.png);
+    background: no-repeat url(./assets/images/oeuvres/image_entree.png);
+    background-size: cover;
     height: 50em;
     width: 100%;
 }
@@ -1551,7 +1548,7 @@ footer div .icon{
 
 .page-oeuvres footer {
   height: 180px;
-  width: 89.5%;
+  width: 100%;
   overflow: hidden;
   background-image: url('./assets/images/oeuvres/ancient-greece-battle-scene-horizontal-260nw-1789236434.jpg');
   background-repeat: repeat-x;
