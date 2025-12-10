@@ -297,8 +297,16 @@ footer div .icon{
     background-color: var(--couleur-accent);
     padding: 1em;
     position: relative;
-    border-radius: 8px;
+    border-radius: 16px;
+    transition: all 1s;
 }
+
+.page-accueil > section:nth-of-type(1) article:hover{
+    box-shadow: 0 0 30px 1px black;
+    transform: scale(1.05);
+}
+
+
 
 .page-accueil > section:nth-of-type(1) iframe{
     width: 49%;
