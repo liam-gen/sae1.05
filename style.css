@@ -297,11 +297,22 @@ footer div .icon{
     background-color: var(--couleur-accent);
     padding: 1em;
     position: relative;
-    border-radius: 8px;
+    border-radius: 16px;
+    transition: all 1s;
+    cursor: pointer;
 }
+
+.page-accueil > section:nth-of-type(1) article:hover{
+    box-shadow: 0 0 30px 1px black;
+    transform: scale(1.01);
+}
+
+
 
 .page-accueil > section:nth-of-type(1) iframe{
     width: 49%;
+    border: none;
+    border-radius: 16px;
 }
 
 .page-accueil > section:nth-of-type(1) article h4{
@@ -317,8 +328,8 @@ footer div .icon{
     width: 50px;
     position: absolute;
     margin: 0;
-    top: 20px;
-    right: 20px;
+    top: 10px;
+    right: 10px;
 }
 
 .page-accueil > section:nth-of-type(2) article{
@@ -328,8 +339,12 @@ footer div .icon{
     justify-content: space-between;
     gap: 20px;
     color: black;
-    box-shadow: 0 0 25px 5px black;
+    box-shadow: 0 0 25px 5px gray;
     font-size: 1.5em;
+}
+
+.page-accueil > section:nth-of-type(2) article strong{
+    color: var(--couleur-accent)
 }
 
 .page-accueil > section:nth-of-type(2) img{
@@ -379,12 +394,17 @@ footer div .icon{
     align-items: center;
 }
 
-.page-accueil > section:nth-of-type(3) article:hover span{
+.page-accueil > section:nth-of-type(3) article a:hover span{
+    background: rgb(13, 94, 175, 0.3);
+    backdrop-filter: blur(20px);
+    
+    top: 0;
+    right: 0;
     bottom: 0;
     left: 0;
-    right: 0;
-    font-size: 5em;
-    border-radius: 40px;
+
+    font-size: 4em;
+    border-radius: 20px;
 }
 
 /* Formalités d'entrée */
