@@ -33,3 +33,7 @@
 - `git add .` *ajouter tous les fichiers*
 - `git commit -m "message"` *créer un commit avec tous les fichiers (mettez un message explicit par pitié => les profs pourront voir)*
 - `git push` *envoyer tous les commits vers le dépôt distant*
+
+# Animations au scroll
+
+https://michalsnik.github.io/aos
