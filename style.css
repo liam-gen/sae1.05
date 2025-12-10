@@ -299,6 +299,7 @@ footer div .icon{
     position: relative;
     border-radius: 16px;
     transition: all 1s;
+    cursor: pointer;
 }
 
 .page-accueil > section:nth-of-type(1) article:hover{
@@ -310,6 +311,8 @@ footer div .icon{
 
 .page-accueil > section:nth-of-type(1) iframe{
     width: 49%;
+    border: none;
+    border-radius: 16px;
 }
 
 .page-accueil > section:nth-of-type(1) article h4{
@@ -325,8 +328,8 @@ footer div .icon{
     width: 50px;
     position: absolute;
     margin: 0;
-    top: 20px;
-    right: 20px;
+    top: 10px;
+    right: 10px;
 }
 
 .page-accueil > section:nth-of-type(2) article{
@@ -336,8 +339,12 @@ footer div .icon{
     justify-content: space-between;
     gap: 20px;
     color: black;
-    box-shadow: 0 0 25px 5px black;
+    box-shadow: 0 0 25px 5px gray;
     font-size: 1.5em;
+}
+
+.page-accueil > section:nth-of-type(2) article strong{
+    color: var(--couleur-accent)
 }
 
 .page-accueil > section:nth-of-type(2) img{
