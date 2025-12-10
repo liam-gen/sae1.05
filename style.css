@@ -1325,7 +1325,7 @@ footer div .icon{
 
 .page-oeuvres header{
     position: relative;
-    background-image: url(./assets/images/oeuvres/image_entree.png);
+    background: no-repeat url(./assets/images/oeuvres/image_entree.png);
     height: 50em;
     width: 100%;
 }
@@ -1532,7 +1532,7 @@ footer div .icon{
 
 .page-oeuvres footer {
   height: 180px;
-  width: 89.5%;
+  width: 100%;
   overflow: hidden;
   background-image: url('./assets/images/oeuvres/ancient-greece-battle-scene-horizontal-260nw-1789236434.jpg');
   background-repeat: repeat-x;
