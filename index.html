@@ -8,10 +8,6 @@
 
     <link rel="stylesheet" href="./style.css">
 
-    <!-- animations scroll -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-
     <meta name="description" content="Office du tourisme de Grèce">
     <meta name="keywords" content="grece, tourisme">
     <meta name="author" content="CHARPENTIER Liam">
@@ -70,17 +66,17 @@
             <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=15.776367187500002%2C34.34343606848294%2C30.278320312500004%2C42.09007006868398&amp;layer=mapnik"></iframe><br/>
             
             <div>
-                <article data-aos="fade-left">
+                <article class="animation-entree droite">
                     <h3>Grec moderne</h3>
                     <h4>Ελληνικά</h4>
                     <p>L'une des langues les plus anciennes encore parlée</p>
                 </article>
-                <article data-aos="fade-left">
+                <article class="animation-entree droite">
                     <h3>Euro</h3>
                     <img src="./assets/icons/euro.svg" alt="Monnaie : Euro">
                     <p>Membre de la zone euro depuis 2001</p>
                 </article>
-                <article data-aos="fade-left">
+                <article class="animation-entree droite">
                     <h3>L’hymne à la liberté</h3>
                     <img src="./assets/icons/music.svg" alt="Hynme grec">
                     <p>L'hymne célèbre la lutte pour l'indépendance grecque et incarne l'esprit de liberté du peuple</p>
@@ -90,16 +86,16 @@
 
         <section>
             <article>
-                <img data-aos="flip-left" src="./assets/images/accueil/drapeau.png" alt="Drapeau de la Grèce">
+                <img src="./assets/images/accueil/drapeau.png" alt="Drapeau de la Grèce">
                 <p>Le drapeau grec se compose de neuf bandes horizontales bleues et  blanches alternées, avec une croix blanche sur fond bleu dans le canton  supérieur gauche. Les neuf bandes représentent les neuf syllabes de la  devise <strong>"Ελευθερία ή Θάνατος"</strong> (Liberté ou Mort).</p>
             </article>
         </section>
 
         <section>
-            <article data-aos="fade-right"><a href="./gastronomie.html"><img src="./assets/images/accueil/lien-gastronomie.jpg" alt=""><span>Gastronomie</span></a></article>
-            <article data-aos="fade-left"><a href="./lieux.html"><img src="./assets/images/accueil/lien-lieux.jpg" alt=""><span>Lieux</span></a></article>
-            <article data-aos="fade-right"><a href="./oeuvre.html"><img src="./assets/images/accueil/lien-arts.jpg" alt=""><span>Arts</span></a></article>
-            <article data-aos="fade-left"><a href="./personnage.html"><img src="./assets/images/accueil/liens-personnages.jpg" alt=""><span>Personnages</span></a></article>
+            <article class="animation-entree gauche"><a href="./gastronomie.html"><img src="./assets/images/accueil/lien-gastronomie.jpg" alt=""><span>Gastronomie</span></a></article>
+            <article class="animation-entree droite"><a href="./lieux.html"><img src="./assets/images/accueil/lien-lieux.jpg" alt=""><span>Lieux</span></a></article>
+            <article class="animation-entree gauche"><a href="./oeuvre.html"><img src="./assets/images/accueil/lien-arts.jpg" alt=""><span>Arts</span></a></article>
+            <article class="animation-entree droite"><a href="./personnage.html"><img src="./assets/images/accueil/liens-personnages.jpg" alt=""><span>Personnages</span></a></article>
         </section>
 
         <section>
@@ -133,6 +129,44 @@
             <img src="./assets/icons/fleche.svg" alt="">
             <img src="./assets/icons/fleche.svg" alt="">
         </div>
+
+        <article class="timeline">
+            <h2>L'histoire de la Grèce</h2>
+
+            <ul>
+                <li><time>Vers 3000 av. J.-C.</time> Début de la civilisation cycladique</li>
+                <li><time>Vers 2700 av. J.-C.</time> Début de la civilisation minoenne en Crète</li>
+                <li><time>Vers 1600 av. J.-C.</time> Début de la civilisation mycénienne</li>
+                <li><time>Vers 1200 av. J.-C.</time> Effondrement de la civilisation mycénienne</li>
+                <li><time>776 av. J.-C.</time> Premiers Jeux olympiques à Olympie
+                    <figure>
+                        <img src="https://unebrevehistoiredart.com/wp-content/uploads/2024/07/the-ancient-olympics-and-other-athletic-games.jpg" alt="">
+                    </figure></li>
+                <li><time>508 av. J.-C.</time> Réformes de Clisthène et naissance de la démocratie athénienne</li>
+                <li><time>490 av. J.-C.</time> Bataille de Marathon</li>
+                <li><time>480 av. J.-C.</time> Bataille des Thermopyles et bataille de Salamine</li>
+                <li><time>447 av. J.-C.</time> Début de la construction du Parthénon</li>
+                <li><time>431 av. J.-C.</time> Début de la guerre du Péloponnèse</li>
+                <li><time>404 av. J.-C.</time> Fin de la guerre du Péloponnèse, victoire de Sparte</li>
+                <li><time>399 av. J.-C.</time> Mort de Socrate</li>
+                <li><time>336 av. J.-C.</time> Alexandre le Grand devient roi de Macédoine</li>
+                <li><time>323 av. J.-C.</time> Mort d'Alexandre le Grand</li>
+                <li><time>146 av. J.-C.</time> Conquête romaine de la Grèce</li>
+                <li><time datetime="0330">330</time> Constantinople devient la capitale de l'Empire byzantin</li>
+                <li><time datetime="1453-05-29">29 mai 1453</time> Chute de Constantinople, conquête ottomane</li>
+                <li><time datetime="1821-03-25">25 mars 1821</time> Début de la guerre d'indépendance grecque</li>
+                <li><time datetime="1832-02-03">3 février 1832</time> Indépendance de la Grèce reconnue</li>
+                <li><time datetime="1896-04-06">6 avril 1896</time> Premiers Jeux olympiques modernes à Athènes</li>
+                <li><time datetime="1912-10-08">8 octobre 1912</time> Début de la première guerre balkanique</li>
+                <li><time datetime="1940-10-28">28 octobre 1940</time> Invasion italienne, entrée dans la Seconde Guerre mondiale</li>
+                <li><time datetime="1944-10-12">12 octobre 1944</time> Libération d'Athènes</li>
+                <li><time datetime="1967-04-21">21 avril 1967</time> Coup d'État des colonels</li>
+                <li><time datetime="1974-07-24">24 juillet 1974</time> Chute de la dictature militaire</li>
+                <li><time datetime="1981-01-01">1er janvier 1981</time> Entrée dans la Communauté économique européenne</li>
+                <li><time datetime="2001-01-01">1er janvier 2001</time> Adoption de l'euro</li>
+                <li><time datetime="2004-08-13">13 août 2004</time> Jeux olympiques d'Athènes</li>
+            </ul>
+        </article>
         
     </main>
 
@@ -163,7 +197,6 @@
         <a href="#"><img src="./assets/icons/fleche.svg" alt="Retourner en haut"></a>
     </aside>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./assets/scripts/script.js"></script>
 </body>
 </html>

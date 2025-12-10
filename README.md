@@ -36,4 +36,4 @@
 
 # Animations au scroll
 
-https://michalsnik.github.io/aos
+utilise la classe `.animation-entree` avec `.droite` ou `.gauche` 

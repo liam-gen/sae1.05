@@ -1,11 +1,6 @@
 /* Script JS */
 
 document.addEventListener("DOMContentLoaded", () => {
-
-    if(AOS){
-        AOS.init();
-    }
-    
     /* Page changée */
 
     // Gestion menu
@@ -89,7 +84,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 })
 
-document.addEventListener("scroll", () => {
+document.body.addEventListener("scroll", () => {
     let bouton = document.querySelector("body > aside")
 
     if(bouton){
@@ -102,4 +97,22 @@ document.addEventListener("scroll", () => {
             bouton.style.pointerEvents = "none"
         }
     }
+
+
+    const elements = document.querySelectorAll('.animation-entree, .timeline ul li');
+  
+    elements.forEach(element => {
+        console.log(element)
+        const rect = element.getBoundingClientRect();
+
+        console.log(rect)
+
+        // 100 pour qu'on puisse voir l'élément disparaitre
+        if (rect.top < window.innerHeight - 100 && rect.bottom > 100) {
+            console.log(element)
+            element.classList.add('visible');
+        } else{
+            element.classList.remove('visible');
+        }
+    });
 })
