@@ -566,6 +566,7 @@ footer div .icon{
     background-image: url(assets/images/personnage/giannisbio.jpg);
     background-position-x: 0;
     background-position-y: -50em;
+    background-size: cover;
     border-radius: 20px;
     box-shadow: 0 0 5px black;
 }
@@ -662,13 +663,22 @@ footer div .icon{
 
 .grece figure {
     display: flex;
+    margin: auto;
+    width: fit-content;
+    
 }
 
 .grece figure p{
     width: 0;
     height: 10em;
     overflow: hidden;
+    opacity: 0;
+    transition: all 1s ease-in-out 0.1s;
+}
 
+.grece figure:hover p {
+    opacity: 1;
+    width: fit-content;
 }
 
 
