@@ -37,6 +37,7 @@ body{
     flex-direction: column;
     justify-content: space-between;
     color: white;
+    overflow-x: hidden;
 }
 
 /* === HEADER === */
@@ -1338,6 +1339,7 @@ footer div .icon{
     PAGE ARTS
    ---------------------------------------- */
 
+
 .page-oeuvres header{
     position: relative;
     background: no-repeat url(./assets/images/oeuvres/image_entree.png);
@@ -1559,7 +1561,7 @@ footer div .icon{
 
 @keyframes frise {
   from { background-position: 0 50%; }
-  to   { background-position: -1000px 50%; } /* -1000px = distance à parcourir ; ajuste si besoin */
+  to   { background-position: -1000px 50%; }
 }
 
 /* Format mobile page arts */
