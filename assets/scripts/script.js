@@ -1,7 +1,26 @@
 /* Script JS */
 
+// animations d'entrée et de sortie
+function gererAnimations(){
+    const elements = document.querySelectorAll('.animation-entree, .timeline ul li');
+  
+    elements.forEach(element => {
+        const rect = element.getBoundingClientRect();
+
+        // 100 pour qu'on puisse voir l'élément apparaitre et disparaitre
+        if (rect.top < window.innerHeight - 100 && rect.bottom > 100) {
+            element.classList.add('visible');
+        } else{
+            element.classList.remove('visible');
+        }
+    });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
     /* Page chargée */
+
+    // initialiser animations
+    gererAnimations();
 
     // Gestion menu
 
@@ -104,17 +123,5 @@ document.body.addEventListener("scroll", () => {
     }
 
 
-    // animations d'entrée et de sortie
-    const elements = document.querySelectorAll('.animation-entree, .timeline ul li');
-  
-    elements.forEach(element => {
-        const rect = element.getBoundingClientRect();
-
-        // 100 pour qu'on puisse voir l'élément apparaitre et disparaitre
-        if (rect.top < window.innerHeight - 100 && rect.bottom > 100) {
-            element.classList.add('visible');
-        } else{
-            element.classList.remove('visible');
-        }
-    });
+    gererAnimations();
 })
