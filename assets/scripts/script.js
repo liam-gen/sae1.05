@@ -1,7 +1,7 @@
 /* Script JS */
 
 document.addEventListener("DOMContentLoaded", () => {
-    /* Page changée */
+    /* Page chargée */
 
     // Gestion menu
 
@@ -26,25 +26,26 @@ document.addEventListener("DOMContentLoaded", () => {
 
         let imageNb = 0;
 
-        /* Défilement automatique
+        //Défilement automatique
         setInterval(() => {
 
             switch(imageNb){
-                case 1:
+                case 0:
                     slider.style.backgroundPosition = "center";
-                    imageNb++;
+                    imageNb = 1;
+                    break;
+                case 1:
+                    slider.style.backgroundPosition = "right";
+                    imageNb = 2;
                     break;
                 case 2:
-                    slider.style.backgroundPosition = "right";
-                    imageNb = 0;
-                    break;
-                default:
                     slider.style.backgroundPosition = "left";
-                    imageNb++;
+                    imageNb = 0;
             }
 
-        }, 5000);*/
+        }, 5000);
 
+        // gestion clique flèches
         let flecheGauche = slider.querySelector("img:first-child");
         let flecheDroite = slider.querySelector("img:last-child");
 
@@ -85,8 +86,12 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 
 document.body.addEventListener("scroll", () => {
+
+    // gestion bouton retour en haut
     let bouton = document.querySelector("body > aside")
 
+
+    // tout en haut => bouton pas visible, dès qu'on scroll => visible
     if(bouton){
         if(window.scrollY > 400){
             bouton.style.opacity = "1";
@@ -99,17 +104,14 @@ document.body.addEventListener("scroll", () => {
     }
 
 
+    // animations d'entrée et de sortie
     const elements = document.querySelectorAll('.animation-entree, .timeline ul li');
   
     elements.forEach(element => {
-        console.log(element)
         const rect = element.getBoundingClientRect();
 
-        console.log(rect)
-
-        // 100 pour qu'on puisse voir l'élément disparaitre
+        // 100 pour qu'on puisse voir l'élément apparaitre et disparaitre
         if (rect.top < window.innerHeight - 100 && rect.bottom > 100) {
-            console.log(element)
             element.classList.add('visible');
         } else{
             element.classList.remove('visible');
