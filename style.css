@@ -25,12 +25,16 @@
 
 /* Style général */
 
+html{
+    /* pas de scroll horizontal pour les animations et la frise */
+    overflow-x: hidden;
+}
+
 html, body{
     margin: 0;
     height: 100%;
     width: 100%;
     scroll-behavior: smooth;
-    overflow-x: hidden;
 }
 
 body{
@@ -39,7 +43,6 @@ body{
     flex-direction: column;
     justify-content: space-between;
     color: white;
-    overflow-x: hidden;
 }
 
 /* === HEADER === */
@@ -64,6 +67,7 @@ body > header div{
     width: 100%;
 }
 
+/* caché par défaut sur pc */
 #bouton-menu{
     display: none;
     width: 40px;

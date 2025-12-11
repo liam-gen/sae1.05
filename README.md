@@ -36,4 +36,13 @@
 
 # Animations au scroll
 
-utilise la classe `.animation-entree` avec `.droite` ou `.gauche` 
+utilisez la classe `.animation-entree` avec `.droite` ou `.gauche` 
+
+# Bouton retour en haut
+
+Ajoutez ce code dans votre main :
+```
+<aside>
+    <a href="#"><img src="./assets/icons/fleche.svg" alt="Retourner en haut"></a>
+</aside>
+```
