@@ -6,7 +6,7 @@
     --couleur-accent: #0d5eaf;
     --couleur-survole: #82B0D9;
     --couleur-gris: #EDEDED;
-    --marge-interne : 1em 5em;
+    --marge-interne : 1em 5%;
 }
 
 /* Polices */
@@ -29,6 +29,8 @@ html, body{
     margin: 0;
     height: 100%;
     width: 100%;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body{
@@ -37,6 +39,7 @@ body{
     flex-direction: column;
     justify-content: space-between;
     color: white;
+    overflow-x: hidden;
 }
 
 /* === HEADER === */
@@ -170,6 +173,122 @@ footer div .icon{
     width: 50px
 }
 
+/* === RETOUR EN HAUT === */
+
+body > aside{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;    
+    background: var(--couleur-survole);
+    border-radius: 50%;
+    padding: .5em;
+    opacity: 0;
+    transition: all 1s;
+    pointer-events: none;
+}
+
+body > aside img{
+    width: 40px;
+    height: 40px;
+    transform: rotate(90deg);
+}
+
+body > aside a{
+    display: flex;
+}
+
+
+
+/* === TIMELINE === */
+
+.timeline {
+    margin: auto;
+    font-family: Inter, Arial, sans-serif;
+}
+
+.timeline ul time {
+    background: var(--couleur-survole);
+    border-radius: 8px;
+    color: white;
+    padding: .4em;
+}
+
+.timeline ul {
+    color: black;
+    list-style-type: none;
+    position: relative;
+    padding-left: 4px;
+
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.timeline ul li {
+    position: relative;
+    padding-bottom: 8px;
+    padding-left: 16px;
+}
+
+.timeline ul li::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border: 4px solid #20a2fd;
+    background-color: white;
+    border-radius: 50%;
+
+    display: block;
+    position: absolute;
+    top: 4px;
+    left: -10px;
+}
+
+.timeline ul::before {
+    content: "";
+    border-right: 4px solid #20a2fd;
+    position: absolute;
+    top: -4px;
+    left: 0;
+    bottom: 0;
+}
+
+.timeline ul li figure{
+    max-width: 300px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.timeline ul li img{
+    width: 100%;
+    transition: transform 1s ease-in-out;
+}
+
+.timeline ul li img:hover{
+    transform: scale(1.5);
+}
+
+
+/* === ANIMATIONS ENTREE === */
+
+.animation-entree, .timeline ul li {
+  opacity: 0;
+  transition: all 0.6s ease;
+}
+
+.animation-entree.droite, .timeline ul li{
+    transform: translateX(100px);
+}
+
+.animation-entree.gauche{
+    transform: translateX(-100px);
+}
+
+.animation-entree.visible, .timeline ul li.visible{
+    opacity: 1;
+    transform: translateX(0);
+}
+
 /* === MOBILE === */
 @media screen and (max-width: 428px) {
 
@@ -213,7 +332,7 @@ footer div .icon{
 .page-accueil{
     display: flex;
     flex-direction: column;
-    gap: 100px;
+    gap: 50px;
 }
 
 .page-accueil header{
@@ -268,6 +387,7 @@ footer div .icon{
     backdrop-filter: blur(20px);
     border-radius: 16px;
     padding: 0 2em;
+    font-family: Inter, Arial, sans-serif;
 }
 
 .page-accueil header section article img{
@@ -275,15 +395,20 @@ footer div .icon{
 }
 
 .page-accueil > section{
-    padding: 1em 5em;
+    padding: 1em 5%;
     font-size: 1.2em;
 }
 
 .page-accueil > section:nth-of-type(1){
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
     gap: 20px;
+}
+
+.page-accueil > section:nth-of-type(1) div, .page-accueil > section:nth-of-type(1) iframe{
+    flex: 1;
+    min-width: 500px;
 }
 
 .page-accueil > section:nth-of-type(1) div{
@@ -300,14 +425,13 @@ footer div .icon{
     border-radius: 16px;
     transition: all 1s;
     cursor: pointer;
+    width: 100%;
 }
 
 .page-accueil > section:nth-of-type(1) article:hover{
     box-shadow: 0 0 30px 1px black;
     transform: scale(1.01);
 }
-
-
 
 .page-accueil > section:nth-of-type(1) iframe{
     width: 49%;
@@ -333,14 +457,20 @@ footer div .icon{
 }
 
 .page-accueil > section:nth-of-type(2) article{
-    padding: 2em 3em;
-    border-radius: 6px;
+    padding: 1em 2em;
+    border-radius: 18px;
+
     display: flex;
     justify-content: space-between;
+    align-items: center;
+
     gap: 20px;
     color: black;
-    box-shadow: 0 0 25px 5px gray;
-    font-size: 1.5em;
+    background: whitesmoke;
+    box-shadow: 0 25px 30px -12px rgba(0, 0, 0, 0.3);
+
+    max-width: 50vw;
+    margin: auto;
 }
 
 .page-accueil > section:nth-of-type(2) article strong{
@@ -348,7 +478,9 @@ footer div .icon{
 }
 
 .page-accueil > section:nth-of-type(2) img{
-    max-width: 300px;
+    width: 150px;
+    height: 100%;
+    border-radius: 8px;
 }
 
 /* Liens vers autres pages */
@@ -378,15 +510,20 @@ footer div .icon{
 
 .page-accueil > section:nth-of-type(3) article span{
     position: absolute;
-    background: var(--couleur-accent);
-    padding: .2em .5em;
-    border-radius: 8px;
+    border-radius: 25px;
     transition: all 1s;
     font-size: 1.5em;
 
-    top: -10px;
-    right: -10px;
+    background: rgb(13, 94, 175, 0.3);
+    backdrop-filter: blur(20px);
 
+    top: 0;
+    right: 0;
+    bottom: 4px; /* sans espace image en bas*/
+    left: 0;
+
+    font-size: 4em;
+    opacity: 0;
     /* Aligner texte au milieu */
 
     display: flex;
@@ -395,27 +532,16 @@ footer div .icon{
 }
 
 .page-accueil > section:nth-of-type(3) article a:hover span{
-    background: rgb(13, 94, 175, 0.3);
-    backdrop-filter: blur(20px);
-    
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-
-    font-size: 4em;
-    border-radius: 20px;
+    opacity: 1;
 }
 
 /* Formalités d'entrée */
 
-.page-accueil > section:nth-of-type(4){
-    background-color: var(--couleur-accent);
-    width: 50%;
-    margin: auto;
-    border-radius: 16px;
-    box-shadow: black 0 0 25px 5px;
-    padding: 1em;
+.page-accueil > section:nth-of-type(4) h3{
+    color: black;
+    text-align: center;
+    margin-bottom: 30px;
+    width: 100%;
 }
 
 .page-accueil > section:nth-of-type(4) header{
@@ -426,15 +552,67 @@ footer div .icon{
 
 .page-accueil > section:nth-of-type(4) header img{
     width: 50px;
+    filter: invert(1);
 }
 
 .page-accueil > section:nth-of-type(4) section{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    font-family: Inter, Arial, sans-serif;
+
+
+    background-color: whitesmoke;
+    color: black;
+    width: 85%;
+    margin: auto;
+    border-radius: 16px;
+    box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.3);
+    padding: 1em;
+}
+
+.page-accueil > section:nth-of-type(4) article ul{
+    list-style: none;
+}
+
+.page-accueil > section:nth-of-type(4) article{
+    min-width: 400px;
+    flex: 1;
+    width: 100%;
 }
 
 
+.page-accueil > section:nth-of-type(4) section article:first-child h4{
+    color: var(--couleur-accent)
+}
+
+.page-accueil > section:nth-of-type(4) section article:first-child ul li{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.page-accueil > section:nth-of-type(4) section article:first-child i{
+    background-color: green;
+    mask: url('./assets/icons/carte-identite.svg') no-repeat center;
+    -webkit-mask: url('./assets/icons/carte-identite.svg') no-repeat center;
+    width: 40px;
+    height: 40px;
+    display: block;
+}
+
+ 
+
+.page-accueil > section:nth-of-type(4) section article:last-child{
+    background: var(--couleur-accent);
+    border-radius: 16px;
+    text-align: center;
+    color: white;
+    padding: 0 2em;
+}
 
 /* Slider */
 
@@ -528,13 +706,20 @@ footer div .icon{
 .page-personnage header nav {
     background-color: var(--couleur-gris);
     color: black;
+    font-weight: bold;
     margin: 5px;
     width: 25em;
-    font-size: 25px;
+    font-size: 30px;
+    border-radius: 20px;
+    box-shadow: 5px 5px black;
+    padding: 20px;
 }
+
+
 .page-personnage header > figure {
     display: flex;
     flex-direction: row-reverse;
+    
 }
 
 .page-personnage{
@@ -548,6 +733,8 @@ footer div .icon{
     border-radius: 20px;
     box-shadow: 5px 5px black;
     padding: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
 }
 
 .page-personnage header h1 {
@@ -646,10 +833,24 @@ footer div .icon{
 .pos-nav {
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.pos-nav nav:nth-child(2) {
+    width: auto;
+}
+
+
+.pos-nav nav:nth-child(2) ul li {
+    display: inline-block;
+    padding: 10px;
+    margin: 20px;
+    list-style: none;
 }
 
 .page-personnage header nav:nth-child(2) {
     height: fit-content;
+
 }
 
 .page-personnage p {
@@ -662,24 +863,65 @@ footer div .icon{
     flex-direction: row;
 }
 
-.grece figure{
-    display: flex;
-    width: fit-content;
-    margin: auto;
-    
-}
 
-.grece figure:hover p{
-    display: block;
-    width: 100%;
-}
 .grece figure figcaption {
     display: none
 }
 
-.grece p{
-    overflow: hidden;
+
+.grece figure {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    margin: auto;
+    border-radius: 20px;
 }
+
+.grece figure img {
+    border-radius: 20px;
+}
+
+.grece figure p {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    color: white;
+    padding: 10px;
+    transition: all 1s ease 0.1s;
+}
+
+.grece figure:hover p {
+    opacity: 1;
+    width: fit-content;
+    height: fit-content;
+    letter-spacing: 2px;
+}
+
+.grece figure:hover {
+    width: fit-content;
+}
+
+
+.grece figure figcaption {
+    display: none
+}
+
+.page-personnage article:last-child {
+    border-radius: 20px;
+}
+
+.page-personnage a {
+    text-decoration: none;
+    color: var(--couleur-accent);
+}
+
+.page-personnage a:hover {
+    background-color: var(--couleur-survole);
+    color: white;
+}
+
+
 
 
 
@@ -833,6 +1075,7 @@ footer div .icon{
     text-align: center;
     display: flex;
     flex-direction: column;
+    overflow: hidden; 
 }
 
 .carte-plat h3 {
@@ -846,6 +1089,11 @@ footer div .icon{
     width: 100%;
     height: 250px;     
     object-fit: cover;
+    transition: transform 0.5s ease; /* L'animation durera 0.5 secondes */
+}
+
+.carte-plat:hover img {
+    transform: scale(1.1); /* Agrandit l'image de 10% */
 }
 
 .carte-plat p {
@@ -870,6 +1118,13 @@ footer div .icon{
     max-width: 100%; 
     height: auto;
     border-radius: 4px;
+    /* Ajout de l'animation fluide */
+    transition: transform 0.5s ease;
+    cursor: pointer;
+}
+
+.col-boisson img:hover {
+    transform: scale(1.1);
 }
 
 .col-boisson h3 {
@@ -895,6 +1150,12 @@ footer div .icon{
 
 .boisson-content.inverse img {
     width: 40%; 
+    transition: transform 0.5s ease; /* Ajout de la fluidité */
+    cursor: pointer;
+}
+
+.boisson-content.inverse img:hover {
+    transform: scale(1.1); /* Zoom */
 }
 
 .boisson-content.inverse div {
@@ -1361,9 +1622,11 @@ footer div .icon{
     PAGE ARTS
    ---------------------------------------- */
 
+
 .page-oeuvres header{
     position: relative;
-    background-image: url(./assets/images/oeuvres/image_entree.png);
+    background: no-repeat url(./assets/images/oeuvres/image_entree.png);
+    background-size: cover;
     height: 50em;
     width: 100%;
 }
@@ -1570,7 +1833,7 @@ footer div .icon{
 
 .page-oeuvres footer {
   height: 180px;
-  width: 89.5%;
+  width: 100%;
   overflow: hidden;
   background-image: url('./assets/images/oeuvres/ancient-greece-battle-scene-horizontal-260nw-1789236434.jpg');
   background-repeat: repeat-x;
@@ -1581,7 +1844,7 @@ footer div .icon{
 
 @keyframes frise {
   from { background-position: 0 50%; }
-  to   { background-position: -1000px 50%; } /* -1000px = distance à parcourir ; ajuste si besoin */
+  to   { background-position: -1000px 50%; }
 }
 
 /* Format mobile page arts */
