@@ -39,6 +39,7 @@ body{
     flex-direction: column;
     justify-content: space-between;
     color: white;
+    overflow-x: hidden;
 }
 
 /* === HEADER === */
@@ -1571,21 +1572,56 @@ body > aside a{
     justify-content: space-around;
 }
 
-.page-lieux section:nth-of-type(3){
-    color : red;
-}
-
 .page-lieux details{
     background-color: #498E9C;
     height: 140px;
     width: 1200px;
+    border-radius: 69px;
+    text-align: center;
+    transition: 0.3s ease-out;
 }
+
+.page-lieux details[open]{
+    width: 1200px;
+    height: 1626px;
+}
+
+.page-lieux details summary{
+    font-size: 91px; 
+
+}
+
+.page-lieux figure {
+    font-size: 64px;
+    text-align: center; 
+}
+
+.page-lieux details div{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap ;
+    justify-content: space-evenly;
+}
+
+.page-lieux details div figure{
+    height: auto;
+    width: 33%;
+}
+
+.page-lieux details figure img{
+    width: 480px;
+    height: auto;
+}
+
+
+
 /* Format mobile page lieux */
 @media screen and (max-width: 428px) {}
 
 /* ----------------------------------------
     PAGE ARTS
    ---------------------------------------- */
+
 
 .page-oeuvres header{
     position: relative;
@@ -1808,7 +1844,7 @@ body > aside a{
 
 @keyframes frise {
   from { background-position: 0 50%; }
-  to   { background-position: -1000px 50%; } /* -1000px = distance à parcourir ; ajuste si besoin */
+  to   { background-position: -1000px 50%; }
 }
 
 /* Format mobile page arts */
