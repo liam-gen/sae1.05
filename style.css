@@ -34,15 +34,19 @@ html, body{
     margin: 0;
     height: 100%;
     width: 100%;
+
+    /* scroll avec transition */
     scroll-behavior: smooth;
 }
 
 body{
     font-family: Playfair, Arial, sans-serif;
+    color: white;
+
+    /* peu importe la taille du main le header est toujours en haut et le footer est toujours en bas */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    color: white;
 }
 
 /* === HEADER === */
@@ -51,6 +55,7 @@ body > header {
     padding: var(--marge-interne);
     background-color: var(--couleur-accent);
 
+    /* afficher le menu mobile en dessous du header */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -61,9 +66,11 @@ body > header {
 }
 
 body > header div{
+    /* logo et menu a chaque extrémité */
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     width: 100%;
 }
 
@@ -128,7 +135,71 @@ body > header nav:not(#menu-mobile) ul a:hover{
 /* === MAIN === */
 
 main{
+    /* prends toute la largeur */
     flex: 1;
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+main > header{
+    position: relative;
+}
+
+main > header video{
+    width: 100%;
+}
+
+main > header .fond-noir{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.3);
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+
+main > header:has(.fond-noir) div:not(.fond-noir){
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+main > header:has(.fond-noir) div:not(.fond-noir) h1{
+    font-size: 15em;
+    text-transform: uppercase;
+    font-weight: bolder;
+    margin: 0;
+}
+
+
+main > header:has(.fond-noir) div:not(.fond-noir) p{
+    font-size: 2.5em;
+}
+
+main > header section{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+main > header section article{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    border-radius: 16px;
+    padding: 0 2em;
+    font-family: Inter, Arial, sans-serif;
+}
+
+main > header section article img{
+    width: 40px;
 }
 
 /* === FOOTER === */
@@ -333,71 +404,6 @@ body > aside a{
     PAGE ACCUEIL
    ---------------------------------------- */
 
-.page-accueil{
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
-}
-
-.page-accueil header{
-    position: relative;
-}
-
-.page-accueil header video{
-    width: 100%;
-}
-
-.page-accueil header div.fond-noir{
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.3);
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-}
-
-
-.page-accueil header div:not(.fond-noir){
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-}
-
-.page-accueil header div:not(.fond-noir) h1{
-    font-size: 15em;
-    text-transform: uppercase;
-    font-weight: bolder;
-    margin: 0;
-}
-
-
-.page-accueil header div:not(.fond-noir) p{
-    font-size: 2.5em;
-}
-
-.page-accueil header section{
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-}
-
-.page-accueil header section article{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    background-color: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(20px);
-    border-radius: 16px;
-    padding: 0 2em;
-    font-family: Inter, Arial, sans-serif;
-}
-
-.page-accueil header section article img{
-    width: 40px;
-}
-
 .page-accueil > section{
     padding: 1em 5%;
     font-size: 1.2em;
@@ -478,7 +484,7 @@ body > aside a{
 }
 
 .page-accueil > section:nth-of-type(2) article strong{
-    color: var(--couleur-accent)
+    color: var(--couleur-accent);
 }
 
 .page-accueil > section:nth-of-type(2) img{
@@ -622,7 +628,7 @@ body > aside a{
 
 /* Slider */
 
-.slider{
+.slider {
     margin: 20px auto;
     width: 1160px;
     height: 650px;
@@ -1454,9 +1460,6 @@ body > aside a{
 /* ----------------------------------------
     PAGE LIEUX
    ---------------------------------------- */
-.page-lieux header{
-    position: relative;
-}
 
 .page-lieux header h1{
     font-size: 75px;
