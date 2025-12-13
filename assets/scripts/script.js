@@ -9,9 +9,9 @@ function gererAnimations(){
 
         // 100 pour qu'on puisse voir l'élément apparaitre et disparaitre
         if (rect.top < window.innerHeight - 100 && rect.bottom > 100) {
-            element.classList.add('visible');
+            element.classList.remove('nonvisible');
         } else{
-            element.classList.remove('visible');
+            element.classList.add('nonvisible');
         }
     });
 }
