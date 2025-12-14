@@ -285,7 +285,7 @@ body > aside a{
     font-family: Inter, Arial, sans-serif;
 }
 
-.timeline ul time {
+.timeline ul time, .timeline ul span {
     background: var(--couleur-survole);
     border-radius: 8px;
     color: white;
@@ -378,6 +378,19 @@ body > aside a{
 
 .animation-entree.haut.nonvisible{
     transform: translateY(-100px);
+}
+
+/* === ACCESSIBILITE === */
+
+/* texte non visible pour les lecteurs d'écran */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
 }
 
 /* === MOBILE === */
@@ -492,7 +505,7 @@ body > aside a{
 
 /* Infos drapeau */
 
-.page-accueil > section:nth-of-type(2) article{
+.page-accueil > article:nth-of-type(1) {
     padding: 1em 2em;
     border-radius: 18px;
 
@@ -509,11 +522,11 @@ body > aside a{
     margin: auto;
 }
 
-.page-accueil > section:nth-of-type(2) article strong{
+.page-accueil > article:nth-of-type(1) strong{
     color: var(--couleur-accent);
 }
 
-.page-accueil > section:nth-of-type(2) img{
+.page-accueil > article:nth-of-type(1) img{
     width: 150px;
     height: 100%;
     border-radius: 8px;
@@ -521,7 +534,7 @@ body > aside a{
 
 /* Liens vers autres pages */
 
-.page-accueil > section:nth-of-type(3){
+.page-accueil > section:nth-of-type(2){
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -530,21 +543,21 @@ body > aside a{
     justify-content: center;
 }
 
-.page-accueil > section:nth-of-type(3) article{
+.page-accueil > section:nth-of-type(2) article{
     position: relative;
     flex-basis: 48%;
 }
 
-.page-accueil > section:nth-of-type(3) article a{
+.page-accueil > section:nth-of-type(2) article a{
     text-decoration: none;
     color: white;
 }
 
-.page-accueil > section:nth-of-type(3) img{
+.page-accueil > section:nth-of-type(2) img{
     width: 100%;
 }
 
-.page-accueil > section:nth-of-type(3) article span{
+.page-accueil > section:nth-of-type(2) article h3{
     position: absolute;
     transition: all 1s;
     font-size: 1.5em;
@@ -568,32 +581,32 @@ body > aside a{
 
 }
 
-.page-accueil > section:nth-of-type(3) article a:hover span{
+.page-accueil > section:nth-of-type(2) article a:hover h3{
     opacity: 1;
     font-size: 4em;
 }
 
 /* Formalités d'entrée */
 
-.page-accueil > section:nth-of-type(4) h3{
+.page-accueil > section:nth-of-type(3) h3{
     color: black;
     text-align: center;
     margin-bottom: 30px;
     width: 100%;
 }
 
-.page-accueil > section:nth-of-type(4) header{
+.page-accueil > section:nth-of-type(3) header{
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-.page-accueil > section:nth-of-type(4) header img{
+.page-accueil > section:nth-of-type(3) header img{
     width: 50px;
     filter: invert(1);
 }
 
-.page-accueil > section:nth-of-type(4) section{
+.page-accueil > section:nth-of-type(3) div{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -612,32 +625,34 @@ body > aside a{
     padding: 1em;
 }
 
-.page-accueil > section:nth-of-type(4) article ul{
+.page-accueil > section:nth-of-type(3) article ul{
     list-style: none;
 }
 
-.page-accueil > section:nth-of-type(4) article{
+.page-accueil > section:nth-of-type(3) article{
     min-width: 400px;
     flex: 1;
     width: 100%;
 }
 
 
-.page-accueil > section:nth-of-type(4) section article:first-child h4{
+.page-accueil > section:nth-of-type(3) div article:first-child h4{
     color: var(--couleur-accent)
 }
 
-.page-accueil > section:nth-of-type(4) section article:first-child ul li{
+.page-accueil > section:nth-of-type(3) div article:first-child ul li{
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-.page-accueil > section:nth-of-type(4) section article:first-child i{
+.page-accueil > section:nth-of-type(3) div article:first-child i{
     /* changer couleur svg pour l'afficher en vert */
     background-color: green;
-    mask: url('./assets/icons/carte-identite.svg') no-repeat center;
-    -webkit-mask: url('./assets/icons/carte-identite.svg') no-repeat center;
+    mask-image: url('./assets/icons/carte-identite.svg');
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
     width: 40px;
     height: 40px;
     display: block;
@@ -645,7 +660,7 @@ body > aside a{
 
  
 
-.page-accueil > section:nth-of-type(4) section article:last-child{
+.page-accueil > section:nth-of-type(3) div article:last-child{
     background: var(--couleur-accent);
     border-radius: 16px;
     text-align: center;
