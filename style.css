@@ -81,6 +81,7 @@ body > header div{
     height: 40px;
 }
 
+/* le menu mobile apparait avec transition sous le header */
 #menu-mobile{
     background-color: var(--couleur-accent);
     max-height: 0;
@@ -89,6 +90,7 @@ body > header div{
     width: 100%;
 }
 
+/* enlever disques + afficher en colone */
 #menu-mobile ul{
     list-style: none;
     display: flex;
@@ -103,22 +105,26 @@ body > header div{
     font-weight: bold;
 }
 
+/* ouvrir le menu quand il a la classe ouvert */
 #menu-mobile.ouvert{
     padding: 1em;
     max-height: 250px;
 }
 
+/* le logo */
 body > header img:not(#bouton-menu){
     width: 70px;
     height: 70px;
 }
 
+/* enlever disques + afficher en ligne avec espace de 10px */
 body > header nav ul{
     list-style: none;
     display: flex;
     gap: 10px;
 }
 
+/* animations des liens du menu */
 body > header nav:not(#menu-mobile) ul a{
     text-decoration: none;
     color: white;
@@ -151,6 +157,7 @@ main > header video{
     width: 100%;
 }
 
+/* fond semi noir transparent pour lisibilité */
 main > header .fond-noir{
     position: absolute;
     background-color: rgba(0, 0, 0, 0.3);
@@ -160,7 +167,7 @@ main > header .fond-noir{
     right: 0;
 }
 
-
+/* les information sur la densité */
 main > header:has(.fond-noir) div:not(.fond-noir){
     position: absolute;
     top: 50%;
@@ -187,6 +194,7 @@ main > header section{
     width: 100%;
 }
 
+/* informations sur la densité avec fond flou */
 main > header section article{
     display: flex;
     align-items: center;
@@ -400,6 +408,7 @@ body > aside a{
         padding: .8em;
     }
 
+    /* afficher bouton menu sur téléphone */
     #bouton-menu{
         display: block;
     }
@@ -600,6 +609,7 @@ body > aside a{
 
 /* Formalités d'entrée */
 
+/* texte au centre */
 .page-accueil > section:nth-of-type(3) h3{
     color: black;
     text-align: center;
@@ -607,16 +617,6 @@ body > aside a{
     width: 100%;
 }
 
-.page-accueil > section:nth-of-type(3) header{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.page-accueil > section:nth-of-type(3) header img{
-    width: 50px;
-    filter: invert(1);
-}
 
 .page-accueil > section:nth-of-type(3) div{
     display: flex;
@@ -637,21 +637,24 @@ body > aside a{
     padding: 1em;
 }
 
+/* supprimer les disques */
 .page-accueil > section:nth-of-type(3) article ul{
     list-style: none;
 }
 
+/* a partir de moins de 400px ils passent en colonne */
 .page-accueil > section:nth-of-type(3) article{
     min-width: 400px;
     flex: 1;
     width: 100%;
 }
 
-
+/* texte membre de l'ue en bleu */
 .page-accueil > section:nth-of-type(3) div article:first-child h4{
     color: var(--couleur-accent)
 }
 
+/* afficher la liste en colone */
 .page-accueil > section:nth-of-type(3) div article:first-child ul li{
     display: flex;
     align-items: center;
@@ -670,8 +673,7 @@ body > aside a{
     display: block;
 }
 
- 
-
+/* style pour infos sur visa */
 .page-accueil > section:nth-of-type(3) div article:last-child{
     background: var(--couleur-accent);
     border-radius: 16px;
@@ -682,6 +684,7 @@ body > aside a{
 
 /* Slider */
 
+/* méthode des (tuiles)? => une seule image */
 .slider {
     margin: 20px auto;
     width: 1160px;
@@ -714,8 +717,10 @@ body > aside a{
     transform: scale(1.2);
 }
 
+/* format responsive en cours de dévelopement */
 /* Format mobile page accueil */
 @media screen and (max-width: 428px) {
+    /* le logo fait 90% de la taille */
     .page-accueil header div:not(.fond-noir){
         width: 90%;
     }
@@ -723,6 +728,7 @@ body > aside a{
     body{
         font-size: 1em;
     }
+
     .page-accueil header div:not(.fond-noir) h1{
         font-size: 3em;
     }
