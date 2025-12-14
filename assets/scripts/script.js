@@ -41,30 +41,9 @@ document.addEventListener("DOMContentLoaded", () => {
     let slider = document.querySelector(".slider");
 
     if(slider){
-        // changement automatique au bout de 5s
-
         let imageNb = 0;
 
-        //Défilement automatique
-        setInterval(() => {
-
-            switch(imageNb){
-                case 0:
-                    slider.style.backgroundPosition = "center";
-                    imageNb = 1;
-                    break;
-                case 1:
-                    slider.style.backgroundPosition = "right";
-                    imageNb = 2;
-                    break;
-                case 2:
-                    slider.style.backgroundPosition = "left";
-                    imageNb = 0;
-            }
-
-        }, 5000);
-
-        // gestion clique flèches
+        // gestion clic flèches
         let flecheGauche = slider.querySelector("img:first-child");
         let flecheDroite = slider.querySelector("img:last-child");
 
