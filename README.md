@@ -7,11 +7,11 @@
 
 ## Pages HTML
 
-- Ne modifiez que l'intérieur du main (normalement le reste fonctionne touchez pas ptdrrr)
+- Ne modifiez que l'intérieur du main
 
 ## Style CSS
 
-- Modifiez uniquement la partie de votre page (et les variables à la limite) (touchez pas au style de base par pitié)
+- Modifiez uniquement la partie de votre page (et les variables à la limite)
 - Évitez de mettre directement les couleurs importantes en brut ou plusieurs valeurs récurrentes
     - Utilisez par ex: color: var(--couleur-accent) pour avoir le bleu
     - La liste des variables est dans :root
