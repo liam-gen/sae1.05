@@ -1,1 +1,3 @@
-.vscode
+.vscode/
+BACKUPS/
+.toremove/
