@@ -458,6 +458,7 @@ body > aside a{
     min-width: 500px;
 }
 
+/* afficher les infos les une en dessous des autres */
 .page-accueil > section:nth-of-type(1) div{
     display: flex;
     flex-direction: column;
@@ -465,6 +466,7 @@ body > aside a{
     gap: 10px;
 }
 
+/* style des infos */
 .page-accueil > section:nth-of-type(1) article{
     background-color: var(--couleur-accent);
     padding: 1em;
@@ -475,17 +477,20 @@ body > aside a{
     width: 100%;
 }
 
+/* agrandir au survol */
 .page-accueil > section:nth-of-type(1) article:hover{
     box-shadow: 0 0 30px 1px black;
     transform: scale(1.01);
 }
 
+/* style de la carte */
 .page-accueil > section:nth-of-type(1) iframe{
     width: 49%;
     border: none;
     border-radius: 16px;
 }
 
+/* texte en haut à droite */
 .page-accueil > section:nth-of-type(1) article h4{
     position: absolute;
     margin: 0;
@@ -495,6 +500,7 @@ body > aside a{
     font-size: 2.5em;
 }
 
+/* image en haut à droite */
 .page-accueil > section:nth-of-type(1) article img{
     width: 50px;
     position: absolute;
@@ -522,10 +528,12 @@ body > aside a{
     margin: auto;
 }
 
+/* devise mis en avant */
 .page-accueil > article:nth-of-type(1) strong{
     color: var(--couleur-accent);
 }
 
+/* style du drapeau */
 .page-accueil > article:nth-of-type(1) img{
     width: 150px;
     height: 100%;
@@ -543,6 +551,7 @@ body > aside a{
     justify-content: center;
 }
 
+/* 2 éléments sur 2 (utiliser grid ?) */
 .page-accueil > section:nth-of-type(2) article{
     position: relative;
     flex-basis: 48%;
@@ -557,6 +566,7 @@ body > aside a{
     width: 100%;
 }
 
+/* texte qui s'affiche au survol caché de base */
 .page-accueil > section:nth-of-type(2) article h3{
     position: absolute;
     transition: all 1s;
@@ -569,6 +579,7 @@ body > aside a{
     bottom: 4px; /* sans espace image en bas*/
     left: 0;
 
+    /* fond bleu semi transparent avec flou */
     background: rgb(13, 94, 175, 0.3);
     backdrop-filter: blur(20px);
     opacity: 0;
@@ -581,6 +592,7 @@ body > aside a{
 
 }
 
+/* animation qui fait apparaitre et grandir le texte au survol */
 .page-accueil > section:nth-of-type(2) article a:hover h3{
     opacity: 1;
     font-size: 4em;

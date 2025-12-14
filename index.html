@@ -4,16 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grèce - Accueil</title>
+
+    <!-- icone de la page -->
     <link rel="shortcut icon" href="./assets/images/logo.png">
 
+    <!-- style -->
     <link rel="stylesheet" href="./style.css">
 
+    <!-- informations pour référencement -->
     <meta name="description" content="Office du tourisme de Grèce">
     <meta name="keywords" content="grece, tourisme">
     <meta name="author" content="CHARPENTIER Liam">
 </head>
 <body>
     <header>
+        <!-- menu de navigation -->
         <div>
             <img src="./assets/images/logo.png" alt="Logo Grèce">
             <nav>
@@ -26,9 +31,11 @@
                 </ul>
             </nav>
 
+            <!-- bouton pour ouvrir le menu sur téléphone caché par défaut -->
             <img src="./assets/icons/bars.svg" alt="Menu" id="bouton-menu">
         </div>
 
+        <!-- menu de navigation mobile caché par défaut -->
         <nav id="menu-mobile">
             <ul>
                 <li><a href="./index.html">Accueil</a></li>
@@ -41,6 +48,7 @@
     </header>
     <main class="page-accueil">
         <header>
+            <!-- fond noir pour plus de lisibilité du texte blanc -->
             <div class="fond-noir"></div>
             <video src="./assets/videos/accueil/header.mp4" muted autoplay loop></video>
 
@@ -66,9 +74,11 @@
 
             <h2 class="sr-only">Carte de la Grèce et statistiques</h2>
 
+            <!-- carte grèce -->
             <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=15.776367187500002%2C34.34343606848294%2C30.278320312500004%2C42.09007006868398&amp;layer=mapnik"></iframe>
             
             <div>
+                <!-- infos importantes -->
                 <article class="animation-entree droite">
                     <h3>Grec moderne</h3>
                     <h4 title="Grec">Ελληνικά</h4>
@@ -88,12 +98,14 @@
         </section>
 
         <article>
+            <!-- infos sur le drapeau -->
             <h2 class="sr-only">Drapeau de la Grèce</h2>
             <img src="./assets/images/accueil/drapeau.png" alt="Drapeau de la Grèce">
             <p>Le drapeau grec se compose de neuf bandes horizontales bleues et  blanches alternées, avec une croix blanche sur fond bleu dans le canton  supérieur gauche. Les neuf bandes représentent les neuf syllabes de la  devise <strong>"Ελευθερία ή Θάνατος"</strong> (Liberté ou Mort).</p>
         </article>
 
         <section>
+            <!-- liens vers les autres pages -->
             <h2 class="sr-only">Liens vers les autres pages</h2>
             <article class="animation-entree gauche"><a href="./gastronomie.html"><img src="./assets/images/accueil/lien-gastronomie.jpg" alt=""><h3>Gastronomie</h3></a></article>
             <article class="animation-entree droite"><a href="./lieux.html"><img src="./assets/images/accueil/lien-lieux.jpg" alt=""><h3>Lieux</h3></a></article>
@@ -101,6 +113,7 @@
             <article class="animation-entree droite"><a href="./personnage.html"><img src="./assets/images/accueil/liens-personnages.jpg" alt=""><h3>Personnages</h3></a></article>
         </section>
 
+        <!-- formalities d'entrée sur le territoire pour les touristes -->
         <section>
             <header>
                 <h3>Formalités d'entrée</h3>
@@ -129,6 +142,7 @@
         </section>
 
         <article class="timeline">
+            <!-- frise historique grèce -->
             <h3>L'histoire de la Grèce</h3>
 
             <ul>
@@ -172,6 +186,7 @@
         </article>
 
 
+        <!-- slider avec images -->
         <div class="slider animation-entree bas">
             <img src="./assets/icons/fleche.svg" alt="">
             <img src="./assets/icons/fleche.svg" alt="">
@@ -180,6 +195,7 @@
         
     </main>
 
+    <!-- pied de pages, liens et menu -->
     <footer>
         <div>
             <img src="./assets/images/logo.png" alt="Logo Grèce">
@@ -206,10 +222,12 @@
         </div>
     </footer>
 
+    <!-- bouton retour en haut de page -->
     <aside>
         <a href="#"><img src="./assets/icons/fleche.svg" alt="Retourner en haut"></a>
     </aside>
 
+    <!-- lien vers le script js -->
     <script src="./assets/scripts/script.js"></script>
 </body>
 </html>
