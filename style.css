@@ -420,6 +420,7 @@ body > aside a{
     PAGE ACCUEIL
    ---------------------------------------- */
 
+/* espace entre chaque section du main */
 .page-accueil{
     gap: 40px;
 }
@@ -429,6 +430,8 @@ body > aside a{
     font-size: 1.2em;
 }
 
+/* Carte & infos importantes */
+
 .page-accueil > section:nth-of-type(1){
     display: flex;
     justify-content: space-between;
@@ -436,6 +439,7 @@ body > aside a{
     gap: 20px;
 }
 
+/* en dessous de 500px ils passent en dessous */
 .page-accueil > section:nth-of-type(1) div, .page-accueil > section:nth-of-type(1) iframe{
     flex: 1;
     min-width: 500px;
@@ -485,6 +489,8 @@ body > aside a{
     top: 10px;
     right: 10px;
 }
+
+/* Infos drapeau */
 
 .page-accueil > section:nth-of-type(2) article{
     padding: 1em 2em;
@@ -628,6 +634,7 @@ body > aside a{
 }
 
 .page-accueil > section:nth-of-type(4) section article:first-child i{
+    /* changer couleur svg pour l'afficher en vert */
     background-color: green;
     mask: url('./assets/icons/carte-identite.svg') no-repeat center;
     -webkit-mask: url('./assets/icons/carte-identite.svg') no-repeat center;
