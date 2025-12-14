@@ -1649,6 +1649,10 @@ body > aside a{
     height: auto;
 }
 
+.page-lieux iframe{
+    margin-bottom: 10px;
+    width: 66%;
+}
 
 
 /* Format mobile page lieux */
