@@ -775,12 +775,12 @@ body > aside a{
     padding: 10px;
 }
 
-.page-personnage header nav {
+.page-personnage header ul {
     background-color: var(--couleur-gris);
     color: black;
     font-weight: bold;
     margin: 5px;
-    width: 25em;
+    width: fit-content;
     font-size: 30px;
     border-radius: 20px;
     box-shadow: 5px 5px black;
@@ -902,28 +902,31 @@ body > aside a{
     color: white;
 }
 
-.pos-nav {
+.pos-nav nav > ul{
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    gap: 0.5em;
 }
 
-.pos-nav nav:nth-child(2) {
-    width: auto;
+.pos-nav nav li ul{
+    display: none;
+    position: absolute;
+    padding: 0;
 }
 
+.pos-nav li:hover > ul {
+    display: block;
+}
 
-.pos-nav nav:nth-child(2) ul li {
+.pos-nav nav li{
     display: inline-block;
     padding: 10px;
     margin: 20px;
     list-style: none;
-}
-
-.page-personnage header nav:nth-child(2) {
-    height: fit-content;
+    text-align: center;
 
 }
+
+
 
 .page-personnage p {
     font-size: 25px;
@@ -986,6 +989,8 @@ body > aside a{
 .page-personnage a {
     text-decoration: none;
     color: var(--couleur-accent);
+    display: block;
+    width: auto;
 }
 
 .page-personnage a:hover {
