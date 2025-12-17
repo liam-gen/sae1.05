@@ -781,7 +781,7 @@ body > aside a{
     font-weight: bold;
     margin: 5px;
     width: fit-content;
-    font-size: 30px;
+    font-size: 20px;
     border-radius: 20px;
     box-shadow: 5px 5px black;
     padding: 20px;
@@ -801,7 +801,7 @@ body > aside a{
 .page-personnage header > figure figcaption {
     background-color: var(--couleur-gris);
     color: black;
-    font-size: 25px;
+    font-size: 15px;
     border-radius: 20px;
     box-shadow: 5px 5px black;
     padding: 10px;
@@ -811,7 +811,7 @@ body > aside a{
 
 .page-personnage header h1 {
     align-self: center;
-    font-size: 75px;
+    font-size: 50px;
 }
 
 .page-personnage figure {
@@ -844,7 +844,7 @@ body > aside a{
 }
 
 .bio:hover p{
-    height: 11em;
+    height: fit-content;
     letter-spacing: 2px;
     opacity: 1;
     backdrop-filter: blur(100px);
@@ -856,7 +856,7 @@ body > aside a{
     border-radius: 20px;
     /*background: radial-gradient(rgba(13,94,175,0.2),rgba(13,94,175,0.4), rgba(13,94,175,0.8), rgba(13,94,175,1));*/
     color: white;
-    font-size: 25px;
+    font-size: 15px;
     line-height: 1.5em;
     width: 40%;
     height: fit-content;
@@ -895,7 +895,7 @@ body > aside a{
 
 .page-personnage h2 {
     text-align: center;
-    font-size: 50px;
+    font-size: 35px;
 }
 
 .page-personnage figcaption {
@@ -929,7 +929,7 @@ body > aside a{
 
 
 .page-personnage p {
-    font-size: 25px;
+    font-size: 15px;
     line-height: 1.5em;
 }
 
