@@ -869,6 +869,7 @@ body > aside a{
     box-shadow: 0 5px 20px black;
     background-position-x: 0;
     background-position-y: -50em;
+
 }
 /*.page-personnage section article:first-child div:hover {
     transition: all 1s ease;
@@ -888,9 +889,13 @@ body > aside a{
 
 
 .page-personnage section article:first-child:hover p{
-    height: 17em;
+    height: fit-content;
     opacity: 1;
-    
+    letter-spacing: 2px;
+}
+
+.page-personnage section article:first-child:hover div{
+    display: none;
 }
 
 .page-personnage h2 {
@@ -926,7 +931,16 @@ body > aside a{
 
 }
 
+.pos-nav ul img{
+    width: 5em;
+    height: auto;
+}
 
+
+.pos-nav nav{
+    display: flex;
+    justify-content: space-around;
+}
 
 .page-personnage p {
     font-size: 15px;
@@ -943,6 +957,10 @@ body > aside a{
     display: none
 }
 
+.grece{
+    position: relative;
+    z-index: 0;
+}
 
 .grece figure {
     display: flex;
