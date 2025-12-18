@@ -796,6 +796,7 @@ body > aside a{
 
 .page-personnage{
     margin: 20px;
+    background-color: var(--gris-fond);
 }
 
 .page-personnage header > figure figcaption {
@@ -850,7 +851,15 @@ body > aside a{
     backdrop-filter: blur(100px);
 }
 
-.page-personnage section article:nth-child(2) {
+.page-personnage section{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+
+.page-personnage section article:nth-child(2){
+    display: flex;
+    flex-direction: column;
     background-color: var(--couleur-accent);
     box-shadow: 0 5px 20px black;
     border-radius: 20px;
@@ -860,6 +869,7 @@ body > aside a{
     line-height: 1.5em;
     width: 40%;
     height: fit-content;
+    
 }
 
 .page-personnage section article:first-child {
@@ -909,6 +919,7 @@ body > aside a{
 
 .pos-nav nav > ul{
     display: flex;
+    flex-direction: row;
     gap: 0.5em;
 }
 
@@ -1021,7 +1032,49 @@ body > aside a{
 
 
 /* Format mobile page personnages */
-@media screen and (max-width: 428px) {}
+
+/* REMTTTRE 428px AU LIEU DE 900*/
+
+@media screen and (max-width: 900px) {
+    
+    .page-personnage section article:first-child div{
+        display: none;
+    }  
+
+    .page-personnage section article:first-child p{
+        height: fit-content;
+        opacity: 1;
+        letter-spacing: 2px;
+    }
+
+    .pos-nav nav > ul{
+        display: flex;
+        flex-direction: column;
+        gap: 0.2em;
+    }
+    .pos-nav nav{
+        display: flex;
+        justify-content: flex-start;
+    }
+    .page-personnage section{
+        flex-wrap: wrap;
+    }
+    .bio p{
+        height: fit-content;
+        letter-spacing: 2px;
+        opacity: 1;
+        backdrop-filter: blur(100px);
+        
+    }
+    .bio {
+        background-image: url(assets/images/personnage/giannisbio.jpg);
+        background-size: auto;
+        background-position-x: 75em;
+        background-position-y: -50em;
+    }
+
+
+}
 
 /* ----------------------------------------
     PAGE GASTRONOMIE
