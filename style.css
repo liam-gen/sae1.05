@@ -775,13 +775,13 @@ body > aside a{
     padding: 10px;
 }
 
-.page-personnage header nav {
+.page-personnage header ul {
     background-color: var(--couleur-gris);
     color: black;
     font-weight: bold;
     margin: 5px;
-    width: 25em;
-    font-size: 30px;
+    width: fit-content;
+    font-size: 20px;
     border-radius: 20px;
     box-shadow: 5px 5px black;
     padding: 20px;
@@ -796,12 +796,13 @@ body > aside a{
 
 .page-personnage{
     margin: 20px;
+    background-color: var(--gris-fond);
 }
 
 .page-personnage header > figure figcaption {
     background-color: var(--couleur-gris);
     color: black;
-    font-size: 25px;
+    font-size: 15px;
     border-radius: 20px;
     box-shadow: 5px 5px black;
     padding: 10px;
@@ -811,7 +812,7 @@ body > aside a{
 
 .page-personnage header h1 {
     align-self: center;
-    font-size: 75px;
+    font-size: 50px;
 }
 
 .page-personnage figure {
@@ -844,22 +845,31 @@ body > aside a{
 }
 
 .bio:hover p{
-    height: 11em;
+    height: fit-content;
     letter-spacing: 2px;
     opacity: 1;
     backdrop-filter: blur(100px);
 }
 
-.page-personnage section article:nth-child(2) {
+.page-personnage section{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+
+.page-personnage section article:nth-child(2){
+    display: flex;
+    flex-direction: column;
     background-color: var(--couleur-accent);
     box-shadow: 0 5px 20px black;
     border-radius: 20px;
     /*background: radial-gradient(rgba(13,94,175,0.2),rgba(13,94,175,0.4), rgba(13,94,175,0.8), rgba(13,94,175,1));*/
     color: white;
-    font-size: 25px;
+    font-size: 15px;
     line-height: 1.5em;
     width: 40%;
     height: fit-content;
+    
 }
 
 .page-personnage section article:first-child {
@@ -869,6 +879,7 @@ body > aside a{
     box-shadow: 0 5px 20px black;
     background-position-x: 0;
     background-position-y: -50em;
+
 }
 /*.page-personnage section article:first-child div:hover {
     transition: all 1s ease;
@@ -888,45 +899,62 @@ body > aside a{
 
 
 .page-personnage section article:first-child:hover p{
-    height: 17em;
+    height: fit-content;
     opacity: 1;
-    
+    letter-spacing: 2px;
+}
+
+.page-personnage section article:first-child:hover div{
+    display: none;
 }
 
 .page-personnage h2 {
     text-align: center;
-    font-size: 50px;
+    font-size: 35px;
 }
 
 .page-personnage figcaption {
     color: white;
 }
 
-.pos-nav {
+.pos-nav nav > ul{
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    gap: 0.5em;
 }
 
-.pos-nav nav:nth-child(2) {
-    width: auto;
+.pos-nav nav li ul{
+    display: none;
+    position: absolute;
+    padding: 0;
 }
 
+.pos-nav li:hover > ul {
+    display: block;
+}
 
-.pos-nav nav:nth-child(2) ul li {
+.pos-nav nav li{
     display: inline-block;
     padding: 10px;
     margin: 20px;
     list-style: none;
+    text-align: center;
+
 }
 
-.page-personnage header nav:nth-child(2) {
-    height: fit-content;
+.pos-nav ul img{
+    width: 5em;
+    height: auto;
+}
 
+
+.pos-nav nav{
+    display: flex;
+    justify-content: space-around;
 }
 
 .page-personnage p {
-    font-size: 25px;
+    font-size: 15px;
     line-height: 1.5em;
 }
 
@@ -986,6 +1014,8 @@ body > aside a{
 .page-personnage a {
     text-decoration: none;
     color: var(--couleur-accent);
+    display: block;
+    width: auto;
 }
 
 .page-personnage a:hover {
@@ -998,7 +1028,68 @@ body > aside a{
 
 
 /* Format mobile page personnages */
-@media screen and (max-width: 428px) {}
+
+/* REMTTTRE 428px AU LIEU DE 900*/
+
+@media screen and (max-width: 900px) {
+    
+    .page-personnage section article:first-child div{
+        display: none;
+    }  
+
+    .page-personnage section article:first-child p{
+        height: fit-content;
+        opacity: 1;
+        letter-spacing: 2px;
+    }
+
+    .pos-nav nav > ul{
+        display: flex;
+        flex-direction: column;
+        gap: 0.2em;
+    }
+    
+    .page-personnage section{
+        flex-wrap: wrap;
+    }
+    .bio p{
+        height: fit-content;
+        letter-spacing: 2px;
+        opacity: 1;
+    }
+    .bio {
+        background-image: url(assets/images/personnage/giannisbio.jpg);
+        background-size: auto;
+        background-position-x: 75em;
+        background-position-y: -50em;
+    }
+    .page-personnage header > figure{
+        flex-direction: column;
+        gap: 0.5em;
+    }
+
+    .page-personnage header > figure img{
+        height: 30em;
+        width: fit-content;
+    }
+
+    .page-personnage header h1 {
+        
+        justify-content: space-around;
+        font-size: 50px;
+    }
+}
+
+@media screen and (max-width: 1100px){
+    .page-personnage section article:first-child div{
+        display: none;
+    } 
+     .page-personnage section article:first-child p{
+        height: fit-content;
+        opacity: 1;
+        letter-spacing: 2px;
+    }
+}
 
 /* ----------------------------------------
     PAGE GASTRONOMIE
