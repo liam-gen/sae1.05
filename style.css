@@ -1780,7 +1780,59 @@ body > aside a{
 
 
 /* Format mobile page lieux */
-@media screen and (max-width: 428px) {}
+@media screen and (max-width: 428px) {
+
+    .page-lieux header {
+        width: 100%;
+    }
+
+    .page-lieux header h1 {
+        font-size: 18.45px;
+        width: 60%;     
+    } 
+
+    
+    
+    .page-lieux #intro p{
+        width: 100%;
+        font-size: 12.5px;
+    }
+
+    .page-lieux #intro h2{
+        font-size: 28px;
+    }
+
+    .page-lieux #intro h3{
+        font-size: 18.25px;
+    }
+
+    .page-lieux iframe{
+      height: 300px;
+    }
+
+    .page-lieux #article-principaux{
+        display: flex;
+        flex-direction: column;
+    
+    }
+
+    .page-lieux #art1{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .page-lieux #art1 p{
+        font-size: 26.5px;
+    }
+
+    .page-lieux #art2    p{
+        font-size: 26.5px;
+    }
+
+    .page-lieux #art2{
+        width: 100%;
+    }
+}
 
 /* ----------------------------------------
     PAGE ARTS
