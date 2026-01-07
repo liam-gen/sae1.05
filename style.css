@@ -1798,6 +1798,10 @@ body > aside a{
         width: 100%;
     }
 
+    .page-lieux header div{
+        width: 428px;
+    }
+
     .page-lieux header h1 {
         font-size: 18.45px;
         width: 60%;     
