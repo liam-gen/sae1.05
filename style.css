@@ -177,7 +177,7 @@ main > header:has(.fond-noir) div:not(.fond-noir){
 }
 
 main > header:has(.fond-noir) div:not(.fond-noir) h1{
-    font-size: 15em;
+    font-size: 10vw;
     text-transform: uppercase;
     font-weight: bolder;
     margin: 0;
@@ -185,13 +185,14 @@ main > header:has(.fond-noir) div:not(.fond-noir) h1{
 
 
 main > header:has(.fond-noir) div:not(.fond-noir) p{
-    font-size: 2.5em;
+    font-size: 2.5vw;
 }
 
 main > header section{
     display: flex;
     justify-content: space-between;
     width: 100%;
+    gap: 20px;
 }
 
 /* informations sur la densité avec fond flou */
@@ -208,6 +209,10 @@ main > header section article{
 
 main > header section article img{
     width: 40px;
+}
+
+main > header section article h2{
+    font-size: 2vw;
 }
 
 main > article h3{
@@ -748,6 +753,13 @@ body > aside a{
 
     .page-accueil header section article{
         padding: .1em .8em;
+    }
+
+
+
+
+    .page-accueil > section:nth-of-type(1) article {
+        width: unset;
     }
 
 
@@ -1687,6 +1699,7 @@ body > aside a{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin : 10px 0;
 }
 
 .page-lieux #art1 p{
@@ -1695,8 +1708,6 @@ body > aside a{
     width: 508px;
     font-size: 36px;
     margin-top: 35px;
-    
-   
 }
  
 .page-lieux #art1 img{
@@ -1714,6 +1725,7 @@ body > aside a{
     flex-direction: column-reverse;
     align-items: center;
     justify-content: flex-end;
+    margin : 10px 0;
 }
 
 .page-lieux #art2 p{
@@ -1739,6 +1751,7 @@ body > aside a{
     border-radius: 69px;
     text-align: center;
     transition: 0.3s ease-out;
+    margin-bottom: 10px;
 }
 
 .page-lieux details[open]{
@@ -1748,7 +1761,6 @@ body > aside a{
 
 .page-lieux details summary{
     font-size: 91px; 
-
 }
 
 .page-lieux figure {
@@ -1780,7 +1792,107 @@ body > aside a{
 
 
 /* Format mobile page lieux */
-@media screen and (max-width: 428px) {}
+@media screen and (max-width: 428px) {
+
+    .page-lieux header {
+        width: 100%;
+    }
+
+    .page-lieux header h1 {
+        font-size: 18.45px;
+        width: 60%;     
+    } 
+
+    .page-lieux #intro p{
+        width: 100%;
+        font-size: 12.5px;
+    }
+
+    .page-lieux #intro h2{
+        font-size: 28px;
+    }
+
+    .page-lieux #intro h3{
+        font-size: 18.25px;
+    }
+
+    .page-lieux iframe{
+      height: 275px;
+    }
+
+    .page-lieux #article-principaux{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    
+    }
+
+    .page-lieux #art1{
+        width: 95%;
+        margin : 10px 0;
+        height: fit-content;
+    }
+
+    .page-lieux #art1 p{
+        font-size: 23px;
+        width: 95%;
+        height: 475px;
+        text-align: center;
+        margin-top: 23px;
+    }
+
+    .page-lieux #art1 img{
+        width: 90%;
+        height: auto;
+        margin: 0;
+        margin-bottom: 10px;
+    }
+
+    .page-lieux #art2{
+        width: 95%;
+        flex-flow: column nowrap;
+        height: 800px;
+        margin-bottom: 10px;
+    }
+
+    .page-lieux #art2 p{
+        font-size: 23px;
+        width: 95%;
+        text-align: center;
+        margin-bottom: 23px;
+    }
+
+    .page-lieux #art2 img{
+        width: 90%;
+        height: auto;
+        margin: 0;
+        margin-bottom: 10px;
+    }
+    
+    .page-lieux details{
+        width: 95%;
+        height: 60px;
+    }
+
+    .page-lieux details[open]{
+        width: 95%;
+    }
+
+    .page-lieux details summary{
+        font-size: 36px;   
+    }
+
+    .page-lieux details div{
+        flex-flow: column nowrap;
+        width: 95%;
+    }
+
+    .page-lieux details div figure img, figcaption{
+        width: 90%;
+        
+    }
+
+}
 
 /* ----------------------------------------
     PAGE ARTS

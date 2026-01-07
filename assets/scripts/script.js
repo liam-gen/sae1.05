@@ -91,7 +91,7 @@ document.addEventListener("scroll", () => {
 
     // tout en haut => bouton pas visible, dès qu'on scroll => visible
     if(bouton){
-        console.log(window.scrollY)
+
         if(window.scrollY > 400){
             bouton.style.opacity = "1";
             bouton.style.pointerEvents = "auto"
