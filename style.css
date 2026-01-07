@@ -1798,8 +1798,12 @@ body > aside a{
         width: 100%;
     }
 
-    .page-lieux header div{
-        width: 428px;
+    .page-lieux header div:nth-of-type(2){
+        position: absolute;
+        top: 10%;
+        left: 5%;
+        text-align: left;
+        width: 90%;
     }
 
     .page-lieux header h1 {
@@ -1891,10 +1895,16 @@ body > aside a{
         width: 95%;
     }
 
-    .page-lieux details div figure img, figcaption{
-        width: 90%;
-        
+
+    .page-lieux details div img{
+        width: 100%;
     }
+
+    .page-lieux details div figcaption{
+        font-size: 32px;
+    }   
+
+    
 
 }
 
