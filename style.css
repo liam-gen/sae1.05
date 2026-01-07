@@ -992,11 +992,6 @@ body > aside a{
 }
 
 
-.grece figure figcaption {
-    display: none
-}
-
-
 .grece figure {
     display: flex;
     flex-direction: row;
@@ -1059,7 +1054,7 @@ body > aside a{
 
 /* REMTTTRE 428px AU LIEU DE 900*/
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 428px) {
     
     .page-personnage section article:first-child div{
         display: none;
@@ -1071,12 +1066,19 @@ body > aside a{
         letter-spacing: 2px;
     }
 
+    .page-personnage section article:first-child {
+        width: 100%;
+    }
+
     .pos-nav nav > ul{
         display: flex;
         flex-direction: column;
         gap: 0.2em;
     }
-    
+    .page-personnage section article:nth-child(2) {
+        width: 100%;
+    }
+
     .page-personnage section{
         flex-wrap: wrap;
     }
@@ -1084,6 +1086,7 @@ body > aside a{
         height: fit-content;
         letter-spacing: 2px;
         opacity: 1;
+        backdrop-filter: blur(50px);
     }
     .bio {
         background-image: url(assets/images/personnage/giannisbio.jpg);
@@ -1102,9 +1105,24 @@ body > aside a{
     }
 
     .page-personnage header h1 {
-        
         justify-content: space-around;
-        font-size: 50px;
+        font-size: 45px;
+    }
+    .page-personnage header {
+        width: 90%;
+    }
+
+    .grece figure img {
+        display: none;
+    }
+    .grece figure p {
+        opacity: 1;
+        width: fit-content;
+        height: fit-content;
+        color: white;
+        padding: 10px;
+        letter-spacing: 2px;
+        
     }
 }
 
@@ -1814,6 +1832,14 @@ body > aside a{
         width: 100%;
     }
 
+    .page-lieux header div:nth-of-type(2){
+        position: absolute;
+        top: 10%;
+        left: 5%;
+        text-align: left;
+        width: 90%;
+    }
+
     .page-lieux header h1 {
         font-size: 18.45px;
         width: 60%;     
@@ -1903,10 +1929,16 @@ body > aside a{
         width: 95%;
     }
 
-    .page-lieux details div figure img, figcaption{
-        width: 90%;
-        
+
+    .page-lieux details div img{
+        width: 100%;
     }
+
+    .page-lieux details div figcaption{
+        font-size: 32px;
+    }   
+
+    
 
 }
 
@@ -2164,7 +2196,7 @@ body > aside a{
     }
 
     .page-oeuvres > section:nth-of-type(1) details {
-        width: 90%;
+        width: 89%;
         align-self: center;
     }
 
