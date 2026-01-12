@@ -1918,6 +1918,7 @@ body > aside a{
 
     .page-lieux details[open]{
         width: 95%;
+        height: 515px;
     }
 
     .page-lieux details summary{
@@ -1925,17 +1926,25 @@ body > aside a{
     }
 
     .page-lieux details div{
-        flex-flow: column nowrap;
+        flex-flow: row wrap;
         width: 95%;
     }
 
+    .page-lieux details div figure{
+        width: 40%;
+        margin : 0;
+    }
 
     .page-lieux details div img{
-        width: 100%;
+        width: 110px;
+        height: auto;
+        border-radius: 50px;
+        
     }
 
     .page-lieux details div figcaption{
-        font-size: 32px;
+        font-size: 24px;
+        text-align: center;
     }   
 
     
