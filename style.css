@@ -2148,7 +2148,6 @@ body > aside a{
     }
 
     .page-oeuvres > section:nth-of-type(1) details {
-        width: 89%;
         align-self: center;
     }
 
@@ -2158,6 +2157,7 @@ body > aside a{
 
     .page-oeuvres > section:nth-of-type(1) > details > p {
         font-size: 10px;
+        padding-right: 2em;
     }
 
     .page-oeuvres > section:nth-of-type(1) article {
