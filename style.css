@@ -1936,7 +1936,7 @@ body > aside a{
 
     .page-lieux details[open]{
         width: 95%;
-        height: 515px;
+        height: auto;
     }
 
     .page-lieux details summary{
@@ -1944,13 +1944,14 @@ body > aside a{
     }
 
     .page-lieux details div{
-        flex-flow: row wrap;
+        flex-flow: column wrap;
+        align-items: center;
         width: 95%;
     }
 
     .page-lieux details div figure{
         width: 40%;
-        margin : 0;
+        margin : 5px 0;
     }
 
     .page-lieux details div img{
@@ -1964,10 +1965,6 @@ body > aside a{
         font-size: 24px;
         text-align: center;
     }   
-
-    
-
-}
 
 /* ----------------------------------------
     PAGE ARTS
