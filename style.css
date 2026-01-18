@@ -1669,7 +1669,175 @@ body > aside a{
 }
 
 /* Format mobile page gastronomie */
-@media screen and (max-width: 428px) {}
+@media screen and (max-width: 428px) {
+    body > header {
+        padding: 0.8em;
+    }
+
+    #bouton-menu {
+        display: block;
+    }
+
+    body > header div nav {
+        display: none;
+    }
+
+    /* FOOTER MOBILE */
+    footer {
+        flex-direction: column;
+        gap: 30px;
+        padding: 1.5em;
+        text-align: center;
+    }
+
+    footer div {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    footer div nav ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        padding: 0;
+    }
+
+    /* PAGE GASTRONOMIE - MOBILE */
+    
+    .gastro-hero {
+        padding: 3em 1em;
+    }
+
+    .hero-content h1 {
+        font-size: 2em;
+        margin-bottom: 1em;
+    }
+
+    .gastro-presentation {
+        padding: 1.5em;
+    }
+
+    .presentation-cols {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .separateur-vertical {
+        width: 100%;
+        height: 1px;
+    }
+
+    .gastro-nav {
+        flex-direction: column;
+        gap: 10px;
+        padding: 1em;
+    }
+
+    .gastro-nav a {
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    /* Grilles en 1 colonne */
+    .grille-plats {
+        grid-template-columns: 1fr;
+        padding: 0 1em;
+    }
+
+    .grille-boissons {
+        grid-template-columns: 1fr;
+        padding: 1em;
+    }
+
+    /* On enlève les barres de séparation sur mobile pour la clarté */
+    .barre-separation {
+        display: none;
+    }
+
+    .boisson-content.inverse {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .boisson-content.inverse img {
+        width: 80%;
+    }
+
+    .boisson-content.inverse div {
+        width: 100%;
+        padding-left: 0;
+        margin-top: 10px;
+    }
+
+    /* Zoom Plat Mobile */
+    .bandeau-zoom {
+        flex-direction: column;
+        height: auto;
+        margin: 1em;
+        padding: 2em 1em 0 1em;
+        text-align: center;
+    }
+
+    .zoom-title-box h2 {
+        font-size: 1.8em;
+        margin-bottom: 1em;
+    }
+
+    .img-salade-ronde {
+        width: 100%;
+        height: auto;
+        clip-path: none;
+    }
+
+    .zoom-container {
+        flex-direction: column;
+        margin: 1em;
+        gap: 20px;
+    }
+
+    .header-intro {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 15px;
+    }
+
+    /* Tourisme Mobile */
+    .tourisme-hero h2 {
+        font-size: 1.8em;
+        top: 10px;
+        left: 5%;
+        right: 5%;
+    }
+
+    .tourisme-liste {
+        padding: 2em 1em;
+        gap: 40px;
+    }
+
+    .activite {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .layout-activite-1, .layout-activite-2 {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .layout-activite-1 .img-principale, 
+    .layout-activite-1 .info-droite,
+    .layout-activite-2 .img-principale,
+    .layout-activite-2 .info-droite {
+        width: 100%;
+    }
+}
 
 
 /* ----------------------------------------
